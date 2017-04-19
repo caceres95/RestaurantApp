@@ -148,7 +148,7 @@
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12">Add Review</label>
               <div class="col-md-9 col-sm-9 col-xs-12">
-                <textarea class="resizable_textarea form-control" placeholder="This text area automatically resizes its height as you fill in more text courtesy of autosize-master it out..."></textarea>
+                <textarea class="resizable_textarea form-control" placeholder="Review"></textarea>
               </div>
             </div>
             <br/>
@@ -158,7 +158,7 @@
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="rating">Rating </label>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="btn-toolbar">
-                  <div class="btn-group">
+                  <div class="btn-group-review">
                     <button class="btn btn-info" type="button">1</button>
                     <button class="btn btn-info" type="button">2</button>
                     <button class="btn btn-info" type="button">3</button>
@@ -167,52 +167,57 @@
                   </div>
                 </div>
               </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-success" id="btn_send_review">Submit</button>
+              </div>
             </div>
-            <button type="button" class="btn btn-primary">Send</button>
+            <br/>
+            <br/>
           </div>
         </div>
       </div>
-      <!-- /page content -->
-
-      <!-- footer content -->
-      <footer>
-        <div class="pull-right">
-          Restaurant App | Consumer
-        </div>
-        <div class="clearfix"></div>
-      </footer>
-      <!-- /footer content -->
     </div>
+    <!-- /page content -->
 
-    <!-- jQuery -->
-    <script src="gentelella/vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="gentelella/vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="gentelella/vendors/nprogress/nprogress.js"></script>
-    <!-- iCheck -->
-    <script src="gentelella/vendors/iCheck/icheck.min.js"></script>
-    <!-- Datatables -->
-    <script src="gentelella/vendors/datatables.net/js/jquery.dataTables.js"></script>
-    <script src="gentelella/vendors/datatables.net-bs/js/dataTables.bootstrap.js"></script>
-    <script src="gentelella/vendors/datatables.net-buttons/js/dataTables.buttons.js"></script>
-    <script src="gentelella/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.js"></script>
-    <script src="gentelella/vendors/datatables.net-buttons/js/buttons.flash.js"></script>
-    <script src="gentelella/vendors/datatables.net-buttons/js/buttons.html5.js"></script>
-    <script src="gentelella/vendors/datatables.net-buttons/js/buttons.print.js"></script>
-    <script src="gentelella/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.js"></script>
-    <script src="gentelella/vendors/datatables.net-keytable/js/dataTables.keyTable.js"></script>
-    <script src="gentelella/vendors/datatables.net-responsive/js/dataTables.responsive.js"></script>
-    <script src="gentelella/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-    <script src="gentelella/vendors/datatables.net-scroller/js/dataTables.scroller.js"></script>
-    <script src="gentelella/vendors/jszip/dist/jszip.js"></script>
-    <script src="gentelella/vendors/pdfmake/build/pdfmake.js"></script>
-    <script src="gentelella/vendors/pdfmake/build/vfs_fonts.js"></script>
+    <!-- footer content -->
+    <footer>
+      <div class="pull-right">
+        Restaurant App | Consumer
+      </div>
+      <div class="clearfix"></div>
+    </footer>
+    <!-- /footer content -->
+  </div>
 
-    <!-- Custom Theme Scripts -->
-    <script src="gentelella/build/js/custom.min.js"></script>
+  <!-- jQuery -->
+  <script src="gentelella/vendors/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- FastClick -->
+  <script src="gentelella/vendors/fastclick/lib/fastclick.js"></script>
+  <!-- NProgress -->
+  <script src="gentelella/vendors/nprogress/nprogress.js"></script>
+  <!-- iCheck -->
+  <script src="gentelella/vendors/iCheck/icheck.min.js"></script>
+  <!-- Datatables -->
+  <script src="gentelella/vendors/datatables.net/js/jquery.dataTables.js"></script>
+  <script src="gentelella/vendors/datatables.net-bs/js/dataTables.bootstrap.js"></script>
+  <script src="gentelella/vendors/datatables.net-buttons/js/dataTables.buttons.js"></script>
+  <script src="gentelella/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.js"></script>
+  <script src="gentelella/vendors/datatables.net-buttons/js/buttons.flash.js"></script>
+  <script src="gentelella/vendors/datatables.net-buttons/js/buttons.html5.js"></script>
+  <script src="gentelella/vendors/datatables.net-buttons/js/buttons.print.js"></script>
+  <script src="gentelella/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.js"></script>
+  <script src="gentelella/vendors/datatables.net-keytable/js/dataTables.keyTable.js"></script>
+  <script src="gentelella/vendors/datatables.net-responsive/js/dataTables.responsive.js"></script>
+  <script src="gentelella/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+  <script src="gentelella/vendors/datatables.net-scroller/js/dataTables.scroller.js"></script>
+  <script src="gentelella/vendors/jszip/dist/jszip.js"></script>
+  <script src="gentelella/vendors/pdfmake/build/pdfmake.js"></script>
+  <script src="gentelella/vendors/pdfmake/build/vfs_fonts.js"></script>
 
-  </body>
-  </html>
+  <!-- Custom Theme Scripts -->
+  <script src="gentelella/build/js/custom.min.js"></script>
+
+</body>
+</html>

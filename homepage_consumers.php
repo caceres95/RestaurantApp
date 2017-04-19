@@ -9,6 +9,7 @@
 
   <title>Restaurant App </title>
 
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <!-- Bootstrap -->
   <link href="gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome -->
