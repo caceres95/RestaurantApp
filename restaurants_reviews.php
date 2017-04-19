@@ -34,7 +34,7 @@
       <div class="col-md-3 left_col">
         <div class="left_col scroll-view">
           <div class="navbar nav_title" style="border: 0;">
-            <a href="index.html" class="site_title"><i class="fa fa-cutlery"></i> <span>Restaurant App </span></a>
+            <a href="homepage_restaurant.php" class="site_title"><i class="fa fa-cutlery"></i> <span>Restaurant App </span></a>
           </div>
 
           <div class="clearfix"></div>
@@ -57,10 +57,10 @@
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
             <div class="menu_section">
               <ul class="nav side-menu">
-                <li><a><i class="fa fa-home"></i> Homepage </a> </li>
-                <li><a><i class="fa fa-edit"></i> Restaurants Reviews </a> </li>
-                <li><a><i class="fa fa-star"></i> Promotions </a></li>
-                <li><a><i class="fa fa-cutlery"></i> Restaurants Profile </a> </li>
+                <li id="homapage_list_consumer" ><a><i class="fa fa-home"  ></i> Homepage </a> </li>
+                <li id="restaurant_reviews_list_consumer"><a><i class="fa fa-edit"></i> Restaurants Reviews </a> </li>
+                <li id="promotions_list_consumer"><a><i class="fa fa-star"></i> Promotions </a></li>
+                <li id="restaurant_profile_consumer"><a><i class="fa fa-cutlery"></i> Restaurants Profile </a> </li>
               </ul>
             </div>
           </div>
@@ -84,8 +84,8 @@
                   <span class=" fa fa-angle-down"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-usermenu pull-right">
-                  <li><a href="javascript:;"> Profile</a></li>
-                  <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  <li><a href="consumer_profile.php"> Profile</a></li>
+                  <li><a href="index.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                 </ul>
               </li>
 
@@ -137,7 +137,7 @@
                     <tr>
                       <td>Garrett Winters</td>
                       <td>Accountant</td>
-                      <td>Tokyo</td>
+                      <td>fbrehjbfgjhrbdjtgfej4fjkberjkbfkhebrjhfgberhdbgfrbejgbfjebgjrbehjgbfjheb4ghfehjrbhbhjk            fhredfjkehrf  herf jhfer dsudfhu  bfi u23irbui34rfuibi bt</td>
                       <td>63</td>
                       <td>2011/07/25</td>
                     </tr>
@@ -189,6 +189,9 @@
     <!-- /footer content -->
   </div>
 
+  <script type="text/javascript" src="js/scriptSideMenu_Consumer.js"></script>
+
+
   <!-- jQuery -->
   <script src="gentelella/vendors/jquery/dist/jquery.min.js"></script>
   <!-- Bootstrap -->
@@ -218,6 +221,9 @@
 
   <!-- Custom Theme Scripts -->
   <script src="gentelella/build/js/custom.min.js"></script>
+
+  <!-- js own scripts -->
+    <script type="text/javascript" src="js/scriptSideMenu_Consumer.js"></script>
 
 </body>
 </html>

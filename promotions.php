@@ -1,63 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Restaurant App </title>
+  <title>Restaurant App </title>
 
-    <!-- Bootstrap -->
-    <link href="gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
-    
-    <!-- Custom styling plus plugins -->
-    <link href="gentelella/build/css/custom.min.css" rel="stylesheet">
-  </head>
+  <!-- Bootstrap -->
+  <link href="gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
 
-  <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
-        <div class="col-md-3 left_col">
-          <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-cutlery"></i> <span>Restaurant App</span></a>
-            </div>
+  <!-- Custom styling plus plugins -->
+  <link href="gentelella/build/css/custom.min.css" rel="stylesheet">
+</head>
 
-            <div class="clearfix"></div>
-
-            <!-- menu profile quick info -->
-          <div class="profile clearfix">
-            <div class="profile_pic">
-              <img src="gentelella/production/images/img.jpg" alt="..." class="img-circle profile_img">
-            </div>
-            <div class="profile_info">
-              <span>Welcome,</span>
-              <h2>John Doe</h2>
-            </div>
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="homepage_restaurant.php" class="site_title"><i class="fa fa-cutlery"></i> <span>Restaurant App</span></a>
           </div>
-          <!-- /menu profile quick info -->
 
-          <br />
+          <div class="clearfix"></div>
 
           <!-- sidebar menu -->
-            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-              <div class="menu_section">
-                <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Homepage </a> </li>
-                  <li><a><i class="fa fa-edit"></i> Restaurants Reviews </a> </li>
-                  <li><a><i class="fa fa-star"></i> Promotions </a></li>
-                  <li><a><i class="fa fa-cutlery"></i> Restaurants Profile </a> </li>
-                </ul>
-              </div>
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <ul class="nav side-menu">
+                <li id="homapage_list_consumer" ><a><i class="fa fa-home"  ></i> Homepage </a> </li>
+                <li id="restaurant_reviews_list_consumer"><a><i class="fa fa-edit"></i> Restaurants Reviews </a> </li>
+                <li id="promotions_list_consumer"><a><i class="fa fa-star"></i> Promotions </a></li>
+                <li id="restaurant_profile_consumer"><a><i class="fa fa-cutlery"></i> Restaurants Profile </a> </li>
+              </ul>
             </div>
-            <!-- /sidebar menu -->
+          </div>
+          <!-- /sidebar menu -->
+
+          <br />
 
         </div>
       </div>
@@ -77,8 +65,8 @@
                   <span class=" fa fa-angle-down"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-usermenu pull-right">
-                  <li><a href="javascript:;"> Profile</a></li>
-                  <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  <li><a href="consumer_profile.php"> Profile</a></li>
+                  <li><a href="index.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                 </ul>
               </li>
 
@@ -88,209 +76,111 @@
       </div>
       <!-- /top navigation -->
 
-        <!-- page content -->
-        <div class="right_col" role="main">
-          <div class="">
-            <div class="clearfix"></div>
+      <!-- page content -->
+      <div class="right_col" role="main">
+        <div class="">
+          <div class="clearfix"></div>
 
-            <div class="row">
-              <div class="col-md-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Promotions<small> </small></h2>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Promotions<small> </small></h2>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
 
-                    <div class="row">
+                  <div class="row">
 
-                      <p>Available promotions!</p>
+                    <p>Available promotions!</p>
 
-                      <div class="col-md-55">
-                        <div class="thumbnail">
-                          <div class="image view view-first">
-                            <img style="width: 100%; display: block;" src="images/media.jpg" alt="image" />
-                            <div class="mask">
-                              <p>Your Text</p>
-                              <div class="tools tools-bottom">
-                                <a href="#"><i class="fa fa-link"></i></a>
-                                <a href="#"><i class="fa fa-pencil"></i></a>
-                                <a href="#"><i class="fa fa-times"></i></a>
-                              </div>
+                    <div class="col-md-55">
+                      <div class="thumbnail">
+                        <div class="image view view-first">
+                          <img style="width: 100%; display: block;" src="images/media.jpg" alt="image" />
+                          <div class="mask">
+                            <p>Your Text</p>
+                            <div class="tools tools-bottom">
+                              <a href="#"><i class=""></i></a>
+                              <a href="#"><i class="fa fa-check-square-o"></i></a>
+                              <a href="#"><i class=""></i></a>
                             </div>
-                          </div>
-                          <div class="caption">
-                            <p>Snow and Ice Incoming for the South</p>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-md-55">
-                        <div class="thumbnail">
-                          <div class="image view view-first">
-                            <img style="width: 100%; display: block;" src="images/media.jpg" alt="image" />
-                            <div class="mask">
-                              <p>Your Text</p>
-                              <div class="tools tools-bottom">
-                                <a href="#"><i class="fa fa-link"></i></a>
-                                <a href="#"><i class="fa fa-pencil"></i></a>
-                                <a href="#"><i class="fa fa-times"></i></a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="caption">
-                            <p>Snow and Ice Incoming for the South</p>
-                          </div>
+                        <div class="caption">
+                          <p>Snow and Ice Incoming for the South</p>
                         </div>
                       </div>
-                      <div class="col-md-55">
-                        <div class="thumbnail">
-                          <div class="image view view-first">
-                            <img style="width: 100%; display: block;" src="images/media.jpg" alt="image" />
-                            <div class="mask">
-                              <p>Your Text</p>
-                              <div class="tools tools-bottom">
-                                <a href="#"><i class="fa fa-link"></i></a>
-                                <a href="#"><i class="fa fa-pencil"></i></a>
-                                <a href="#"><i class="fa fa-times"></i></a>
-                              </div>
+                    </div>
+                    <div class="col-md-55">
+                      <div class="thumbnail">
+                        <div class="image view view-first">
+                          <img style="width: 100%; display: block;" src="images/media.jpg" alt="image" />
+                          <div class="mask">
+                            <p>Your Text</p>
+                            <div class="tools tools-bottom">
+                              <a href="#"><i class="fa fa-link"></i></a>
+                              <a href="#"><i class="fa fa-pencil"></i></a>
+                              <a href="#"><i class="fa fa-times"></i></a>
                             </div>
-                          </div>
-                          <div class="caption">
-                            <p>Snow and Ice Incoming for the South</p>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-md-55">
-                        <div class="thumbnail">
-                          <div class="image view view-first">
-                            <img style="width: 100%; display: block;" src="images/media.jpg" alt="image" />
-                            <div class="mask">
-                              <p>Your Text</p>
-                              <div class="tools tools-bottom">
-                                <a href="#"><i class="fa fa-link"></i></a>
-                                <a href="#"><i class="fa fa-pencil"></i></a>
-                                <a href="#"><i class="fa fa-times"></i></a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="caption">
-                            <p>Snow and Ice Incoming for the South</p>
-                          </div>
+                        <div class="caption">
+                          <p>Snow and Ice Incoming for the South</p>
                         </div>
                       </div>
-                      <div class="col-md-55">
-                        <div class="thumbnail">
-                          <div class="image view view-first">
-                            <img style="width: 100%; display: block;" src="images/media.jpg" alt="image" />
-                            <div class="mask">
-                              <p>Your Text</p>
-                              <div class="tools tools-bottom">
-                                <a href="#"><i class="fa fa-link"></i></a>
-                                <a href="#"><i class="fa fa-pencil"></i></a>
-                                <a href="#"><i class="fa fa-times"></i></a>
-                              </div>
+                    </div>
+                    <div class="col-md-55">
+                      <div class="thumbnail">
+                        <div class="image view view-first">
+                          <img style="width: 100%; display: block;" src="images/media.jpg" alt="image" />
+                          <div class="mask">
+                            <p>Your Text</p>
+                            <div class="tools tools-bottom">
+                              <a href="#"><i class="fa fa-link"></i></a>
+                              <a href="#"><i class="fa fa-pencil"></i></a>
+                              <a href="#"><i class="fa fa-times"></i></a>
                             </div>
-                          </div>
-                          <div class="caption">
-                            <p>Snow and Ice Incoming for the South</p>
                           </div>
                         </div>
-                      </div>
-
-
-                      <div class="col-md-55">
-                        <div class="thumbnail">
-                          <div class="image view view-first">
-                            <img style="width: 100%; display: block;" src="images/media.jpg" alt="image" />
-                            <div class="mask no-caption">
-                              <div class="tools tools-bottom">
-                                <a href="#"><i class="fa fa-link"></i></a>
-                                <a href="#"><i class="fa fa-pencil"></i></a>
-                                <a href="#"><i class="fa fa-times"></i></a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="caption">
-                            <p><strong>Image Name</strong>
-                            </p>
-                            <p>Snow and Ice Incoming</p>
-                          </div>
+                        <div class="caption">
+                          <p>Snow and Ice Incoming for the South</p>
                         </div>
                       </div>
-                      <div class="col-md-55">
-                        <div class="thumbnail">
-                          <div class="image view view-first">
-                            <img style="width: 100%; display: block;" src="images/media.jpg" alt="image" />
-                            <div class="mask no-caption">
-                              <div class="tools tools-bottom">
-                                <a href="#"><i class="fa fa-link"></i></a>
-                                <a href="#"><i class="fa fa-pencil"></i></a>
-                                <a href="#"><i class="fa fa-times"></i></a>
-                              </div>
+                    </div>
+                    <div class="col-md-55">
+                      <div class="thumbnail">
+                        <div class="image view view-first">
+                          <img style="width: 100%; display: block;" src="images/media.jpg" alt="image" />
+                          <div class="mask">
+                            <p>Your Text</p>
+                            <div class="tools tools-bottom">
+                              <a href="#"><i class="fa fa-link"></i></a>
+                              <a href="#"><i class="fa fa-pencil"></i></a>
+                              <a href="#"><i class="fa fa-times"></i></a>
                             </div>
-                          </div>
-                          <div class="caption">
-                            <p><strong>Image Name</strong>
-                            </p>
-                            <p>Snow and Ice Incoming</p>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-md-55">
-                        <div class="thumbnail">
-                          <div class="image view view-first">
-                            <img style="width: 100%; display: block;" src="images/media.jpg" alt="image" />
-                            <div class="mask no-caption">
-                              <div class="tools tools-bottom">
-                                <a href="#"><i class="fa fa-link"></i></a>
-                                <a href="#"><i class="fa fa-pencil"></i></a>
-                                <a href="#"><i class="fa fa-times"></i></a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="caption">
-                            <p><strong>Image Name</strong>
-                            </p>
-                            <p>Snow and Ice Incoming</p>
-                          </div>
+                        <div class="caption">
+                          <p>Snow and Ice Incoming for the South</p>
                         </div>
                       </div>
-                      <div class="col-md-55">
-                        <div class="thumbnail">
-                          <div class="image view view-first">
-                            <img style="width: 100%; display: block;" src="images/media.jpg" alt="image" />
-                            <div class="mask no-caption">
-                              <div class="tools tools-bottom">
-                                <a href="#"><i class="fa fa-link"></i></a>
-                                <a href="#"><i class="fa fa-pencil"></i></a>
-                                <a href="#"><i class="fa fa-times"></i></a>
-                              </div>
+                    </div>
+                    <div class="col-md-55">
+                      <div class="thumbnail">
+                        <div class="image view view-first">
+                          <img style="width: 100%; display: block;" src="images/media.jpg" alt="image" />
+                          <div class="mask">
+                            <p>Your Text</p>
+                            <div class="tools tools-bottom">
+                              <a href="#"><i class="fa fa-link"></i></a>
+                              <a href="#"><i class="fa fa-pencil"></i></a>
+                              <a href="#"><i class="fa fa-times"></i></a>
                             </div>
-                          </div>
-                          <div class="caption">
-                            <p><strong>Image Name</strong>
-                            </p>
-                            <p>Snow and Ice Incoming</p>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-md-55">
-                        <div class="thumbnail">
-                          <div class="image view view-first">
-                            <img style="width: 100%; display: block;" src="images/media.jpg" alt="image" />
-                            <div class="mask no-caption">
-                              <div class="tools tools-bottom">
-                                <a href="#"><i class="fa fa-link"></i></a>
-                                <a href="#"><i class="fa fa-pencil"></i></a>
-                                <a href="#"><i class="fa fa-times"></i></a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="caption">
-                            <p><strong>Image Name</strong>
-                            </p>
-                            <p>Snow and Ice Incoming</p>
-                          </div>
+                        <div class="caption">
+                          <p>Snow and Ice Incoming for the South</p>
                         </div>
                       </div>
                     </div>
@@ -300,29 +190,34 @@
             </div>
           </div>
         </div>
-        <!-- /page content -->
-
-        <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-            Restaurant App | Consumer
-          </div>
-          <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
       </div>
+      <!-- /page content -->
+
+      <!-- footer content -->
+      <footer>
+        <div class="pull-right">
+          Restaurant App | Consumer
+        </div>
+        <div class="clearfix"></div>
+      </footer>
+      <!-- /footer content -->
     </div>
+  </div>
+  <script type="text/javascript" src="js/scriptSideMenu_Consumer.js"></script>
 
-    <!-- jQuery -->
-    <script src="gentelella/vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="gentelella/vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="gentelella/vendors/nprogress/nprogress.js"></script>
+  <!-- jQuery -->
+  <script src="gentelella/vendors/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- FastClick -->
+  <script src="gentelella/vendors/fastclick/lib/fastclick.js"></script>
+  <!-- NProgress -->
+  <script src="gentelella/vendors/nprogress/nprogress.js"></script>
 
-    <!-- Custom Theme Scripts -->
-    <script src="gentelella/build/js/custom.min.js"></script>
-  </body>
+  <!-- Custom Theme Scripts -->
+  <script src="gentelella/build/js/custom.min.js"></script>
+
+  <!-- js own scripts -->
+    <script type="text/javascript" src="js/scriptSideMenu_Consumer.js"></script>
+</body>
 </html>
