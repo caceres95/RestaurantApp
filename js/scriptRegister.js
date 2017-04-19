@@ -7,15 +7,19 @@ $(document).ready(function(){
         var $firstName = $("#firstName");
         var $lastName = $("#lastName");
         var $newUserName = $("#newusername")
-        var $email = $("#email");
-        var $p1 = $("#p1");
-        var $p2 = $("#p2");
+        var $email = $("#user-email");
+        var $p1 = $("#p1_user");
+        var $p2 = $("#p2_user");
         var $country = $("#country");
         var $gender = 0;
+        var $day = $("#dob-day");
+        var $month = $("#dob-month");
+        var $year = $("#dob-year");
 
         if ($firstName.val() == "" || $lastName.val() == "" || $newUserName.val() == "" 
             || $email.val() == "" || $p1.val() == "" || $p2.val() == ""  || $country.val() == 0 
-            || (!(($("#g1").is(":checked") || $("#g2").is(":checked"))))) {
+            || (!(($("#g1").is(":checked") || $("#g2").is(":checked")))) || $day.val()== "" 
+            || $month.val()== "" || $year.val() == "" ) {
 
             alert("Please add the information needed");
         }
