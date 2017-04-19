@@ -31,7 +31,7 @@
   <link href="gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
   <!-- Custom Theme Style -->
-  <link href="gentelella/build/css/custom.min.css" rel="stylesheet">
+  <link href="gentelella/build/css/custom.css" rel="stylesheet">
 </head>
 
 <body class="nav-md">
@@ -82,38 +82,36 @@
                   <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
                     <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name <span class="required">*</span>
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name" id="firstName">First Name <span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
                         <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name <span class="required">*</span>
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name" id="lastName">Last Name <span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
                         <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="username">Username <span class="required">*</span>
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="username" id="newUserName">Username <span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
                         <input type="text" id="username" name="username" required="required" class="form-control col-md-7 col-xs-12">
                       </div>
                     </div>
-                    <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="password">Password <span class="required">*</span>
-                      </label>
+                    <div class="item form-group">
+                      <label for="password" class="control-label col-md-3">Password</label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="password" id="password" name="password" required="required" class="form-control col-md-7 col-xs-12">
+                        <input id="password" type="password" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
                       </div>
                     </div>
-                    <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="password_confirmation">Password Confirmation <span class="required">*</span>
-                      </label>
+                    <div class="item form-group">
+                      <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Confirm Password</label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="password" id="password_confirmation" name="password_confirmation" required="required" class="form-control col-md-7 col-xs-12">
+                        <input id="password2" type="password" name="password2" data-validate-linked="password" class="form-control col-md-7 col-xs-12" required="required">
                       </div>
                     </div>
                     <div class="form-group">
@@ -333,9 +331,9 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button class="btn btn-primary" type="button">Cancel</button>
+                          <button class="btn btn-primary" type="button" id="cancel_register_button">Cancel</button>
                           <button class="btn btn-primary" type="reset">Reset</button>
-                          <button type="submit" class="btn btn-success">Submit</button>
+                          <button type="submit" class="btn btn-success" id="register_button">Submit</button>
                         </div>
                       </div>
                     </form>
@@ -398,9 +396,12 @@
 <script src="gentelella/vendors/starrr/dist/starrr.js"></script>
 <!-- Custom Theme Scripts -->
 <script src="gentelella/build/js/custom.min.js"></script>
+<!-- validator -->
+<script src="gentelella/vendors/validator/validator.js"></script>
 
 <!-- js own scripts -->
 <script type="text/javascript" src="js/scriptSideMenu_Register.js"></script>
+<script type="text/javascript" src="js/scriptRegister.js"></script>
 
 </body>
 </html>

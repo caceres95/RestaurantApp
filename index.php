@@ -35,33 +35,34 @@
             <form>
               <h1>Login Form</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input id="userName" type="text" class="form-control" placeholder="Username" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                <input id="password" type="password" class="form-control" placeholder="Password" required="" />
               </div>
                <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Login As:</label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <div id="gender" class="btn-group" data-toggle="buttons">
+                  <div id="type_user" class="btn-group" data-toggle="buttons">
                     <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                      <input type="radio" name="gender" value="male"> &nbsp; Consumer &nbsp;
+                      <input id="t1" type="radio" name="type_user" value="1"> &nbsp; Consumer &nbsp;
                     </label>
                     <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                      <input type="radio" name="gender" value="female"> Manager
+                      <input id="t2"  type="radio" name="type_user" value="2"> Manager
                     </label>
                   </div>
                 </div>
               </div> 
+              <input id="remember" type="checkbox" name="remember" value="1"> Remember me
               <div>
-                <a class="btn btn-default submit" href="index.html">Log in</a>
+                <a class="btn btn-default submit" href="index.html" id="loginButton">Log in</a>
               </div>
 
               <div class="clearfix"></div>
 
               <div class="separator">
                 <p class="change_link">New to site?
-                  <a href="#signup" class="to_register"> Create Account </a>
+                  <a href="register_consumer.php" class="to_register"> Create Account </a>
                 </p>
 
                 <div class="clearfix"></div>
@@ -112,5 +113,10 @@
         <script src="gentelella/vendors/starrr/dist/starrr.js"></script>
         <!-- Custom Theme Scripts -->
         <script src="gentelella/build/js/custom.min.js"></script>
+
+        <!-- js own scripts -->
+        <script type="text/javascript" src="js/scriptSideMenu_Register.js"></script>
+        <script type="text/javascript" src="js/scriptRegister.js"></script>
+        <script type="text/javascript" src="js/scriptLogin.js"></script>
   </body>
 </html>
