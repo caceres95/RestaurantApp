@@ -51,10 +51,10 @@
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Homepage </a> </li>
-                  <li><a><i class="fa fa-edit"></i> Custumer Reviews </a> </li>
-                  <li><a><i class="fa fa-star"></i> Promotions </a></li>
-                  <li><a><i class="fa fa-cutlery"></i> Profile </a> </li>
+                  <li id="homapage_list_manager"><a><i class="fa fa-home"></i> Homepage </a> </li>
+                  <li id="restaurant_reviews_list_manager"><a><i class="fa fa-edit"></i> Custumer Reviews </a> </li>
+                  <li id="promotions_list_manager"><a><i class="fa fa-star"></i> Promotions </a></li>
+                  <li id="restaurant_profile_manager"><a><i class="fa fa-cutlery"></i> Profile </a> </li>
                 </ul>
               </div>
             </div>
@@ -96,18 +96,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Restaurant Reviews</h3>
-              </div>
-
-              <div class="title_right">
-                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for...">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Search</button>
-                    </span>
-                  </div>
-                </div>
+                <h3>Customer Reviews</h3>
               </div>
             </div>
 
@@ -174,7 +163,37 @@
         <!-- /footer content -->
       </div>
     </div>
+    <!-- jQuery -->
+    <script src="gentelella/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="gentelella/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="gentelella/vendors/nprogress/nprogress.js"></script>
+    <!-- iCheck -->
+    <script src="gentelella/vendors/iCheck/icheck.min.js"></script>
+    <!-- Datatables -->
+    <script src="gentelella/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="gentelella/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="gentelella/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="gentelella/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="gentelella/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="gentelella/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="gentelella/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="gentelella/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="gentelella/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="gentelella/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="gentelella/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="gentelella/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src="gentelella/vendors/jszip/dist/jszip.min.js"></script>
+    <script src="gentelella/vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="gentelella/vendors/pdfmake/build/vfs_fonts.js"></script>
 
+    <!-- Custom Theme Scripts -->
+    <script src="gentelella/build/js/custom.min.js"></script>
 
+    <!-- js own scripts -->
+    <script type="text/javascript" src="js/scriptSideMenu_Manager.js"></script>
   </body>
 </html>

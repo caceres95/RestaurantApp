@@ -51,10 +51,10 @@
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Homepage </a> </li>
-                  <li><a><i class="fa fa-edit"></i> Custumer Reviews </a> </li>
-                  <li><a><i class="fa fa-star"></i> Promotions </a></li>
-                  <li><a><i class="fa fa-cutlery"></i> Profile </a> </li>
+                  <li id="homapage_list_manager"><a><i class="fa fa-home"></i> Homepage </a> </li>
+                  <li id="restaurant_reviews_list_manager"><a><i class="fa fa-edit"></i> Custumer Reviews </a> </li>
+                  <li id="promotions_list_manager"><a><i class="fa fa-star"></i> Promotions </a></li>
+                  <li id="restaurant_profile_manager"><a><i class="fa fa-cutlery"></i> Profile </a> </li>
                 </ul>
               </div>
             </div>
@@ -172,7 +172,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Restaurant App | Consumer
+            ©2017 All Rights Reserved.
           </div>
           <div class="clearfix"></div>
         </footer>
@@ -188,8 +188,9 @@
     <script src="gentelella/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="gentelella/vendors/nprogress/nprogress.js"></script>
-
     <!-- Custom Theme Scripts -->
     <script src="gentelella/build/js/custom.min.js"></script>
+    <!-- js own scripts -->
+    <script type="text/javascript" src="js/scriptSideMenu_Manager.js"></script>
   </body>
 </html>
