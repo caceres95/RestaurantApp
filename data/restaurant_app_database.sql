@@ -106,7 +106,7 @@ INSERT INTO `user_information` (`idUser`, `fName`, `lName`, `username`, `passwrd
 INSERT INTO `restaurant_information` (`rName`, `rUsername`, `passwrd`, `address`, `phone`, `email`, `webpage`, `openHour`, `openMin`, `closeHour`, `closeMin`) VALUES
 ("Carl's Jr.", "carlsjr", "mcsucks", "Humberto Lobo 1015", 81203045, "carlsjr@hotmail.com", "www.carlsjr.com", 8, 30, 23, 0),
 ("Mr. Brown", "mrbrown", "white", "Eugenio Garza Sada 123", 81301243, "mrbrown@hotmail.com", "www.mrbrown.com", 9, 0, 22, 0),
-("Buffalo Wild Wings", "buffalo", "alitas", "Alfonso Reyes 345", 83046869, "bww@hotmail.com", "www.bww.com", 8, 30, 22, 0);
+("Buffalo Wild Wings", "bww", "alitas", "Alfonso Reyes 345", 83046869, "bww@hotmail.com", "www.bww.com", 8, 30, 22, 0);
 
 INSERT INTO `promotions` (`rUsername`, `name`, `descriptions`, `imageURL`, `startDay`, `startMonth`, `startYear`, `endDay`, `endMonth`, `endYear`) VALUES
 ("carlsjr", "2x1 burgers", "Pay one burger, get two!", "images/carlsjr/promo1.jpg", 3, 1, 2017, 31, 1, 2017),
