@@ -100,8 +100,6 @@
         </div>
         <!-- /top navigation -->
 
-        
-
         <!-- footer content -->
         <footer>
           <div class="pull-right">

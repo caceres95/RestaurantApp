@@ -53,7 +53,7 @@
               <h3>You are: </h3>
               <ul class="nav side-menu">
                 <li><a><i class="fa fa-home"></i> Consumer </a> </li>
-                <li><a><i class="fa fa-edit"></i> Restaurant Manager </a> </li>
+                <li><a><i class="fa fa-edit"></i> Restaurant Manager </a></li>
               </ul>
             </div>
           </div>
