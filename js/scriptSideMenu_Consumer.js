@@ -1,7 +1,5 @@
 $(document).ready(function(){
-
-    console.log("HOLA");
-
+    
 	$("#homapage_list_consumer").on("click", function(){
         window.location.replace("homepage_consumers.php");
     });

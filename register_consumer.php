@@ -40,7 +40,7 @@
       <div class="col-md-3 left_col">
         <div class="left_col scroll-view">
           <div class="navbar nav_title" style="border: 0;">
-            <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span> Restaurant App </span></a>
+            <a href="index.html" class="site_title"><i class="fa fa-cutlery"></i> <span> Restaurant App </span></a>
           </div>
 
           <div class="clearfix"></div>
@@ -52,8 +52,8 @@
             <div class="menu_section">
               <h3>You are: </h3>
               <ul class="nav side-menu">
-                <li><a><i class="fa fa-home"></i> Consumer </a> </li>
-                <li><a><i class="fa fa-edit"></i> Restaurant Manager </a></li>
+                <li id="consumer_register_button" ><a><i class="fa fa-user"></i> Consumer </a> </li>
+                <li id="manager_register_button" ><a><i class="fa fa-cutlery"></i> Restaurant Manager </a></li>
               </ul>
             </div>
           </div>
@@ -330,13 +330,6 @@
                       </div>
                       <br />
                       <br />
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="security_key">Security Key <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="security_key" name="security_key" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
@@ -350,60 +343,67 @@
                 </div>
               </div>
             </div>
-
-            
-
-
-                
-            <!-- footer content -->
-            <footer>
-              <div class="pull-right">
-                Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-              </div>
-              <div class="clearfix"></div>
-            </footer>
-            <!-- /footer content -->
-          </div>
+          </form>
         </div>
+      </div>
+    </div>
 
-        <!-- jQuery -->
-        <script src="gentelella/vendors/jquery/dist/jquery.min.js"></script>
-        <!-- Bootstrap -->
-        <script src="gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-        <!-- FastClick -->
-        <script src="gentelella/vgentelellaendors/fastclick/lib/fastclick.js"></script>
-        <!-- NProgress -->
-        <script src="../vendors/nprogress/nprogress.js"></script>
-        <!-- bootstrap-progressbar -->
-        <script src="gentelella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-        <!-- iCheck -->
-        <script src="gentelella/vendors/iCheck/icheck.min.js"></script>
-        <!-- bootstrap-daterangepicker -->
-        <script src="gentelella/vendors/moment/min/moment.min.js"></script>
-        <script src="gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-        <!-- bootstrap-wysiwyg -->
-        <script src="gentelella/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
-        <script src="gentelella/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-        <script src="gentelella/vendors/google-code-prettify/src/prettify.js"></script>
-        <!-- jQuery Tags Input -->
-        <script src="gentelella/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
-        <!-- Switchery -->
-        <script src="gentelella/vendors/switchery/dist/switchery.min.js"></script>
-        <!-- Select2 -->
-        <script src="gentelella/vendors/select2/dist/js/select2.full.min.js"></script>
-        <!-- Parsley -->
-        <script src="gentelella/vendors/parsleyjs/dist/parsley.min.js"></script>
-        <!-- Autosize -->
-        <script src="gentelella/vendors/autosize/dist/autosize.min.js"></script>
-        <!-- jQuery autocomplete -->
-        <script src="gentelella/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
-        <!-- starrr -->
-        <script src="gentelella/vendors/starrr/dist/starrr.js"></script>
-        <!-- Custom Theme Scripts -->
-        <script src="gentelella/build/js/custom.min.js"></script>
 
-      </body>
-      </html>
+
+
+
+    <!-- footer content -->
+    <footer>
+      <div class="pull-right">
+        Restaurant App | Consumer
+      </div>
+      <div class="clearfix"></div>
+    </footer>
+    <!-- /footer content -->
+  </div>
+</div>
+
+<!-- jQuery -->
+<script src="gentelella/vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="gentelella/vgentelellaendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="../vendors/nprogress/nprogress.js"></script>
+<!-- bootstrap-progressbar -->
+<script src="gentelella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- iCheck -->
+<script src="gentelella/vendors/iCheck/icheck.min.js"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="gentelella/vendors/moment/min/moment.min.js"></script>
+<script src="gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap-wysiwyg -->
+<script src="gentelella/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+<script src="gentelella/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+<script src="gentelella/vendors/google-code-prettify/src/prettify.js"></script>
+<!-- jQuery Tags Input -->
+<script src="gentelella/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+<!-- Switchery -->
+<script src="gentelella/vendors/switchery/dist/switchery.min.js"></script>
+<!-- Select2 -->
+<script src="gentelella/vendors/select2/dist/js/select2.full.min.js"></script>
+<!-- Parsley -->
+<script src="gentelella/vendors/parsleyjs/dist/parsley.min.js"></script>
+<!-- Autosize -->
+<script src="gentelella/vendors/autosize/dist/autosize.min.js"></script>
+<!-- jQuery autocomplete -->
+<script src="gentelella/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+<!-- starrr -->
+<script src="gentelella/vendors/starrr/dist/starrr.js"></script>
+<!-- Custom Theme Scripts -->
+<script src="gentelella/build/js/custom.min.js"></script>
+
+<!-- js own scripts -->
+<script type="text/javascript" src="js/scriptSideMenu_Register.js"></script>
+
+</body>
+</html>
 
 
 

@@ -31,3 +31,12 @@
 #country_select{
     width: 48%;
 }
+
+#open-hour , #open-min, #close-hour {
+    width: 18%;
+    float: left;
+}
+
+#close-min {
+    width: 18%;
+}

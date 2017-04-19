@@ -68,7 +68,7 @@
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Restaurant App</h1>
+                  <h1><i class="fa fa-cutlery"></i> Restaurant App</h1>
                   <p>©2017 All Rights Reserved.</p>
                 </div>
               </div>
