@@ -82,24 +82,24 @@
                   <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
                     <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name" id="firstName">First Name <span class="required">*</span>
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="firstName">First Name <span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="text" id="firstName" required="required" class="form-control col-md-7 col-xs-12">
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name" id="lastName">Last Name <span class="required">*</span>
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="lastName" >Last Name <span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="text" id="lastName" name="lastName" required="required" class="form-control col-md-7 col-xs-12">
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="username" id="newUserName">Username <span class="required">*</span>
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="username" >Username <span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" id="username" name="username" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="text" id="newusername" name="username" required="required" class="form-control col-md-7 col-xs-12">
                       </div>
                     </div>
                     <div class="item form-group">
@@ -126,10 +126,10 @@
                       <div class="col-md-6 col-sm-6 col-xs-12">
                         <div id="gender" class="btn-group" data-toggle="buttons">
                           <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                            <input id="g1" type="radio" name="gender" value="0"> &nbsp; Male &nbsp;
+                            <input id="g1" type="radio" name="gender" value="1"> &nbsp; Male &nbsp;
                           </label>
                           <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                            <input id="g2" type="radio" name="gender" value="1"> Female
+                            <input id="g2" type="radio" name="gender" value="2"> Female
                           </label>
                         </div>
                       </div>
@@ -311,7 +311,7 @@
                       </label>
                       <div class="col-md-9 col-sm-9 col-xs-12">
                         <div class="control">
-                          <select id="country_select" name="Country" class="form-control">
+                          <select id="country" name="Country" class="form-control">
                             <option value="0">Select a country...</option>
                             <option value="Mexico">Mexico</option>
                             <option value="USA">USA</option>
@@ -329,6 +329,7 @@
                             <option value="Singapur">Singapur</option>
                           </select>
                         </div>
+                      </div>
                       </div>
                       <br />
                       <br />
@@ -370,9 +371,9 @@
 <!-- Bootstrap -->
 <script src="gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- FastClick -->
-<script src="gentelella/vgentelellaendors/fastclick/lib/fastclick.js"></script>
+<script src="gentelella/vendors/fastclick/lib/fastclick.js"></script>
 <!-- NProgress -->
-<script src="../vendors/nprogress/nprogress.js"></script>
+<script src="gentelella/vendors/nprogress/nprogress.js"></script>
 <!-- bootstrap-progressbar -->
 <script src="gentelella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
 <!-- iCheck -->
@@ -399,7 +400,7 @@
 <!-- starrr -->
 <script src="gentelella/vendors/starrr/dist/starrr.js"></script>
 <!-- Custom Theme Scripts -->
-<script src="gentelella/build/js/custom.min.js"></script>
+<script src="gentelella/build/js/custom.js"></script>
 <!-- validator -->
 <script src="gentelella/vendors/validator/validator.js"></script>
 

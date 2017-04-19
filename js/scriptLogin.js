@@ -8,12 +8,6 @@ $(document).ready(function(){
     	}
     });
 
-    $("#userName").keyup(function(event){
-    	if(event.keyCode == 13){
-    		$("#loginButton").click();
-    	}
-    });
-
     $("#loginButton").on("click", function(){
     	var $userName = $("#userName");
     	var $password = $("#password");
@@ -42,8 +36,12 @@ $(document).ready(function(){
     			dataType : "json",
     			contentType : "application/x-www-form-urlencoded",
     			success : function(jsonResponse){
-    				alert(jsonResponse.message);
-    				window.location.replace("home.php");
+    				if (jsonResponse.message == "Consumer"){
+    					window.location.replace("homepage_consumers.php");
+    				}
+    				else{
+    					window.location.replace("homepage_restaurant.php");
+    				}
     			},
     			error : function(errorMessage){
     				alert(errorMessage.responseText);
