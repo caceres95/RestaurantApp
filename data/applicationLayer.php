@@ -10,7 +10,7 @@ switch($action){
 	break;
 	case "ADDCOMMENT" : addCommentFunction();
 	break;
-	case "GETCOMMENTS" : getCommentsFunction();
+	case "GETCUSTOMERSREVIEWS" : getCustomerReviewsFunction();
 	break;
 	case "LOADPROFILE" : loadProfileFunction();
 	break;
@@ -155,26 +155,26 @@ function encryptPassword() {
 	return $userPassword;
 }
 
-function getCommentsFunction(){
+function getCustomerReviewsFunction(){
 
-	session_start();
+	// session_start();
 
-	if(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
+	// if(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
 
-		$result = attemptGetComments();
+	// 	$result = attemptGetComments();
 
-		if ($result["status"] == "SUCCESS"){
-			echo json_encode($result["arrayCommentsBox"]);
-		}
-		else {
-			header('HTTP/1.1 500' . $result["status"]);
-			die($result["status"]);
-		}
-	}
-	else {
-		header('HTTP/1.1 410 Session has expired');
-		die("Session has expired");
-	}
+	// 	if ($result["status"] == "SUCCESS"){
+	// 		echo json_encode($result["arrayCommentsBox"]);
+	// 	}
+	// 	else {
+	// 		header('HTTP/1.1 500' . $result["status"]);
+	// 		die($result["status"]);
+	// 	}
+	// }
+	// else {
+	// 	header('HTTP/1.1 410 Session has expired');
+	// 	die("Session has expired");
+	// }
 }
 
 function addCommentFunction(){

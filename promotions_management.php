@@ -14,7 +14,7 @@
     <!-- Font Awesome -->
     <link href="gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="gentella/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- bootstrap-daterangepicker -->
     <link href="gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
@@ -81,7 +81,7 @@
                 </a>
                 <ul class="dropdown-menu dropdown-usermenu pull-right">
                   <li><a href="javascript:;"> Profile</a></li>
-                  <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  <li><a href="index.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                 </ul>
               </li>
 

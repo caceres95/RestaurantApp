@@ -126,21 +126,7 @@
                       <th>Date</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>2011/04/25</td>
-                    </tr>
-                    <tr>
-                      <td>Garrett Winters</td>
-                      <td>Accountant</td>
-                      <td>fbrehjbfgjhrbdjtgfej4fjkberjkbfkhebrjhfgberhdbgfrbejgbfjebgjrbehjgbfjheb4ghfehjrbhbhjk            fhredfjkehrf  herf jhfer dsudfhu  bfi u23irbui34rfuibi bt</td>
-                      <td>63</td>
-                      <td>2011/07/25</td>
-                    </tr>
+                  <tbody id="restaurantsReviewsBody">
                   </tbody>
                 </table>
               </div>
@@ -148,7 +134,7 @@
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12">Add Review</label>
               <div class="col-md-9 col-sm-9 col-xs-12">
-                <textarea class="resizable_textarea form-control" placeholder="Review"></textarea>
+                <textarea class="resizable_textarea form-control" placeholder="Review" id="add_review"></textarea>
               </div>
             </div>
             <br/>
@@ -224,6 +210,7 @@
 
   <!-- js own scripts -->
     <script type="text/javascript" src="js/scriptSideMenu_Consumer.js"></script>
+    <script type="text/javascript" src="js/scriptRestaurants_Reviews.js"></script>
 
 </body>
 </html>

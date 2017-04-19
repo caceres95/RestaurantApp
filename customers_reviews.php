@@ -14,7 +14,7 @@
     <!-- Font Awesome -->
     <link href="gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="gentella/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- bootstrap-daterangepicker -->
     <link href="gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
@@ -81,7 +81,7 @@
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="javascript:;"> Profile</a></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="index.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
 
@@ -123,29 +123,7 @@
                           <th>Rating</th>
                         </tr>
                       </thead>
-
-
-                      <tbody>
-                        <tr>
-                          <td>Tiger Nixon</td>
-                          <td>System Architect</td>
-                          <td>Edinburgh</td>
-                        </tr>
-                        <tr>
-                          <td>Garrett Winters</td>
-                          <td>Accountant</td>
-                          <td>Tokyo</td>
-                        </tr>
-                        <tr>
-                          <td>Ashton Cox</td>
-                          <td>Junior Technical Author</td>
-                          <td>San Francisco</td>
-                        </tr>
-                        <tr>
-                          <td>Cedric Kelly</td>
-                          <td>Senior Javascript Developer</td>
-                          <td>Edinburgh</td>
-                        </tr>
+                      <tbody id="customersReviewsBody">
                       </tbody>
                     </table>
                   </div>
@@ -195,5 +173,6 @@
 
     <!-- js own scripts -->
     <script type="text/javascript" src="js/scriptSideMenu_Manager.js"></script>
+    <script type="text/javascript" src="js/scriptCustomer_Reviews.js"></script>
   </body>
 </html>
