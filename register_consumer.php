@@ -337,7 +337,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                           <button class="btn btn-primary" type="button" id="cancel_register_button">Cancel</button>
                           <button class="btn btn-primary" type="reset">Reset</button>
-                          <button type="submit" class="btn btn-success" id="register_button">Submit</button>
+                          <button type="submit" class="btn btn-success" id="register_button_consumer">Submit</button>
                         </div>
                       </div>
                     </form>

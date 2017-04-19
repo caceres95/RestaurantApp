@@ -55,7 +55,7 @@
               </div> 
               <input id="remember" type="checkbox" name="remember" value="1"> Remember me
               <div>
-                <a class="btn btn-default submit" href="index.html" id="loginButton">Log in</a>
+                <a class="btn btn-default submit" id="loginButton">Log in</a>
               </div>
 
               <div class="clearfix"></div>

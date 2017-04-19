@@ -34,6 +34,7 @@ $(document).ready(function(){
     			"remember" : $("#remember").is(":checked"),
     			"typeUser" : $typeuser
     		};
+    		//console.log(jsonToSend);
     		$.ajax({
     			url : "data/applicationLayer.php",
     			type : "POST",

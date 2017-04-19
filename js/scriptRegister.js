@@ -46,8 +46,10 @@ $(document).ready(function(){
                     "userPassword2" : $("#p2").val(),
                     "userCountry" : $("#country").val(),
                     "userGender" : $gender
-                };     
-                $.ajax({
+                };   
+                console.log(jsonObject);
+  
+                /*$.ajax({
                     url : "data/applicationLayer.php",
                     type : "POST" , 
                     data : jsonObject , 
@@ -60,7 +62,7 @@ $(document).ready(function(){
                     error : function(errorMessage){
                         alert(errorMessage.responseText);
                     }
-                });
+                });*/
             }
         }
     });  
