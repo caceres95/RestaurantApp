@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS `promotions` (
 	idPromotions INT(8) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     rUsername VARCHAR(50) NOT NULL,
 	name VARCHAR(50) NOT NULL,
+    descriptions VARCHAR(500) NOT NULL,
 	imageURL VARCHAR(500) NOT NULL,
 	startDay INT(5) NOT NULL,
     startMonth VARCHAR(35) NOT NULL,
@@ -64,18 +65,18 @@ ALTER TABLE `consumer_fav_restaurants`
 ADD UNIQUE KEY `usersFavsResID` (`idRestaurant`,`idUser`);
 
 CREATE TABLE IF NOT EXISTS `consumer_visits` (
-	idVisit INT(8) UNSIGNED NOT NULL,
+	idVisit INT(8) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     rUsername VARCHAR(50) NOT NULL,
     username VARCHAR(50) NOT NULL,
-    --visitDay INT(5) NOT NULL,
-    --visitMonth VARCHAR(35) NOT NULL,
-    --visitYear INT(10) NOT NULL,
+    -- visitDay INT(5) NOT NULL,
+    -- visitMonth VARCHAR(35) NOT NULL,
+    -- visitYear INT(10) NOT NULL,
     -- arrivedHour INT(5) NOT NULL,
     -- arrivedMin INT(5) NOT NULL,
     -- leftHour INT(5) NOT NULL,
     -- leftMin INT(5) NOT NULL,
-    timeArrived DATETIME(30) NULL,
-    timeLeft DATETIME(30) NULL,
+    timeArrived DATETIME(6) NULL,
+    timeLeft DATETIME(6) NULL,
 	FOREIGN KEY(rUsername) REFERENCES restaurant_information(rUsername),
 	FOREIGN KEY(username) REFERENCES user_information(username)
 );
@@ -107,7 +108,7 @@ INSERT INTO `restaurant_information` (`rName`, `rUsername`, `passwrd`, `address`
 ("Mr. Brown", "mrbrown", "white", "Eugenio Garza Sada 123", 81301243, "mrbrown@hotmail.com", "www.mrbrown.com", 9, 0, 22, 0),
 ("Buffalo Wild Wings", "buffalo", "alitas", "Alfonso Reyes 345", 83046869, "bww@hotmail.com", "www.bww.com", 8, 30, 22, 0);
 
-INSERT INTO `promotions` (`rUsername`, `name`, `imageURL`, `startDay`, `startMonth`, `startYear`, `endDay`, `endMonth`, `endYear`) VALUES
+INSERT INTO `promotions` (`rUsername`, `name`, `descriptions`, `imageURL`, `startDay`, `startMonth`, `startYear`, `endDay`, `endMonth`, `endYear`) VALUES
 ("carlsjr", "2x1 burgers", "Pay one burger, get two!", "images/carlsjr/promo1.jpg", 3, 1, 2017, 31, 1, 2017),
 ("carlsjr", "2x1 Nuggets", "Pay one order, get two!", "images/carlsjr/promo2.jpg", 3, 1, 2017, 15, 1, 2017),
 ("carlsjr", "2x1 milkshake", "Pay one milkshake, get two!", "images/carlsjr/promo3.jpg", 3, 1, 2017, 10, 1, 2017),
@@ -119,30 +120,13 @@ INSERT INTO `restaurant_reviews` (`rUsername`, `username`, `reviewText`, `rating
 ("carlsjr", "caroromo1", "Muy ricas :)", 5);
 
 INSERT INTO `consumer_fav_restaurants` (`idRestaurant`, `idUser`) VALUES
-("carlsjr", "cbca"),
-("carlsjr", "caroromo1"),
-("carlsjr", "alfredo08"),
-("mrbrown", "cbca"),
-("mrbrown", "caroromo1"),
-("mrbrown", "alfredo08"),
-("carlsjr", "jacquitha");
-
-CREATE TABLE IF NOT EXISTS `consumer_visits` (
-    idVisit INT(8) UNSIGNED NOT NULL,
-    rUsername VARCHAR(50) NOT NULL,
-    username VARCHAR(50) NOT NULL,
-    -- visitDay INT(5) NOT NULL,
-    -- visitMonth VARCHAR(35) NOT NULL,
-    -- visitYear INT(10) NOT NULL,
-    -- arrivedHour INT(5) NOT NULL,
-    -- arrivedMin INT(5) NOT NULL,
-    -- leftHour INT(5) NOT NULL,
-    -- leftMin INT(5) NOT NULL,
-    timeArrived DATETIME(30) NULL,
-    timeLeft DATETIME(30) NULL,
-    FOREIGN KEY(rUsername) REFERENCES restaurant_information(rUsername),
-    FOREIGN KEY(username) REFERENCES user_information(username)
-);
+(1, 7),
+(1, 6),
+(1, 1),
+(2, 7),
+(2, 6),
+(2, 1),
+(3, 9);
 
 INSERT INTO `consumer_visits` (`rUsername`, `username`,`timeArrived`, `timeLeft`) VALUES
 ('carlsjr', 'alfredo08', '2017-04-19 10:14:30', '2017-04-19 12:30:00'),
