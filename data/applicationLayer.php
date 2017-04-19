@@ -8,40 +8,18 @@ $action = $_POST["action"];
 switch($action){
 	case "LOGIN" : loginFunction();
 		break;
-	case "ADDCOMMENT" : addCommentFunction();
-		break;
-	case "GETCOMMENTS" : getCommentsFunction();
-		break;
-	case "LOADPROFILE" : loadProfileFunction();
-		break;
-	case "REGISTER" : registerFunction();
-		break;
-	case "ACTIVESESSION" : activeSessionFunction();
-		break;
-	case "ENDSESSION" : endSessionFunction();
-		break;
-	case "GETFRIENDS" : getFriendsFunction();
-		break;
-	case "SEARCHCOOKIE" : createSearchCookie();
-		break;
-	case "SEARCHUSER" : searchUsersFunction();
-		break;
-	case "GETREQUESTS" : getFriendsRequestFunction();
-		break;
-	case "ACCEPTREQUESTS" : acceptFriendsRequestFunction();
-		break;
-	case "DECLINEREQUESTS" : declineFriendsRequestFunction();
-		break;
-	case "SENDFRIENDREQUEST" : addNewFriends();
-		break;
+	
 }
 
 function loginFunction(){
 
 	$userName = $_POST['username'];
 	$userPassword = $_POST['userPassword'];
+	$typeUser = $_POST['typeUser'];
 
-	$result = attemptLogin($userName, $userPassword);
+	$result = attemptLogin($userName, $userPassword, $typeUser);
+
+	echo $result;
 
 	if ($result["status"] == "SUCCESS"){
 		$remember = $_POST["remember"];
@@ -50,19 +28,21 @@ function loginFunction(){
 			setcookie("user", "$userName", time() + (86400 * 30), "/", "", 0);
 		}
 
+
 		session_start();
 		$_SESSION['user'] = $userName;
 		$_SESSION['loginTime'] = time();
+		$_SESSION['typeUser'] = $typeUser;
 
 		echo json_encode(array("message" => "Login Successful"));
 	}	
 	else{
 		header('HTTP/1.1 500' . $result["status"]);
-		die($result["status"]);
+		die($result);
 	}	
 }
 
-function registerFunction(){
+/*function registerFunction(){
 
 	$userName = $_POST['username'];
 
@@ -175,8 +155,11 @@ function activeSessionFunction(){
 
 	session_start();
 
-	if(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
-		echo json_encode(array("message" => "Session is active"));
+	if(isset($_SESSION['user']) && $_SESSION['typeUser'] == "consumer"  && time() - $_SESSION['loginTime'] < 1800){ 
+		echo json_encode(array("message" => "Consumer"));
+	}
+	elseif(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
+		echo json_encode(array("message" => "Manager"));
 	}
 	else {
 		header('HTTP/1.1 410 Session has expired');
@@ -363,7 +346,7 @@ function addNewFriends(){
 		die("Session has expired");
 	}
 
-}
+}*/
 
 
 

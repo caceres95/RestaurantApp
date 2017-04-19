@@ -16,60 +16,45 @@ function connectionToDataBase(){
 	}
 }
 
-function attemptLogin($userName, $userPassword){
+function attemptLogin($userName, $userPassword, $typeUser){
 
 	$conn = connectionToDataBase();
 
 	if ($conn != null){
-		$sql = "SELECT username, passwrd FROM UsersDatabase WHERE username = '$userName' AND passwrd = '$userPassword'";
+		if ($typeUser == "consumer") {
+			$sql = "SELECT username, passwrd FROM user_information WHERE username = '$userName' AND passwrd = '$userPassword'";
 
-		$result = $conn->query($sql);
+			$result = $conn->query($sql);
 
-		if ($result->num_rows > 0)
-		{
-			$conn -> close();
-			return array("status" => "SUCCESS");
+			if ($result->num_rows > 0)
+			{
+				$conn -> close();
+				return array("status" => "SUCCESS");
+			}
+			else{
+				$conn -> close();
+				return array("status" => "WRONG CREDENTIALS!");
+			}
 		}
-		else{
-			$conn -> close();
-			return array("status" => "WRONG CREDENTIALS!");
+		else {
+			$sql = "SELECT rUsername, passwrd FROM restaurant_information WHERE rUsername = '$userName' AND passwrd = '$userPassword'";
+
+			$result = $conn->query($sql);
+
+			if ($result->num_rows > 0)
+			{
+				$conn -> close();
+				return array("status" => "SUCCESS");
+			}
+			else{
+				$conn -> close();
+				return array("status" => "WRONG CREDENTIALS!");
+			}
 		}
 	}
 	else{
 		$conn -> close();
 		return array("status" => "CONNECTION WITH DB WENT WRONG");
-	}
-}
-
-function attemptVerifyUser($userName) {
-	$conn = connectionToDataBase();
-
-	if ($conn != null)
-	{
-		$sql = "SELECT * FROM UsersDatabase WHERE username = '$userName'";
-		$result = $conn->query($sql);
-
-			# The current user exists
-		if ($result->num_rows > 0)
-		{
-			while($row = $result->fetch_assoc()) 
-			{
-				$conn->close();
-				return array("status" => "SUCCESS", "password" => $row['passwrd']);
-			}
-		}
-		else
-		{
-				# The user doesn't exists in the Database
-			$conn->close();
-			return array("status" => "ERROR");
-		}
-	}
-	else
-	{
-        	# Connection to Database was not successful
-		$conn->close();
-		return array("status" => "ERROR");
 	}
 }
 
@@ -104,18 +89,17 @@ function attemptRegister($userName, $userPassword, $userFirstName, $userLastName
 
 	if ($conn != null){
 		$last_id = $conn->insert_id;
-
-		$sql = "INSERT INTO UsersDatabase (idUser, fName, lName, username, passwrd, email, country, gender) VALUES ('$last_id','$userFirstName', '$userLastName', '$userName', '$userPassword', '$userEmail', '$userCountry', '$userGender')";
+		$sql = "INSERT INTO UsersDatabase (idUser, fName, lName, username, passwrd, email, country, gender) VALUES ('$last_id', $userFirstName', '$userLastName', '$userName', '$userPassword', '$userEmail', '$userCountry', '$userGender')";
 
 		$result = $conn->query($sql);
 
 		if ($result) {
 			$conn -> close();
-			return array("status" => $last_id);
+			return array("status" => "SUCCESS");
 		}
 		else{
 			$conn -> close();
-			return array("status" => $last_id);
+			return array("status" => "ERROR");
 		}
 	}
 	else{

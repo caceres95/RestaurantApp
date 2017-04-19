@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    activeSession(); // Redirect to homepage if the session is active
+    //activeSession(); // Redirect to homepage if the session is active
 
     $("#password").keyup(function(event){
     	if(event.keyCode == 13){
@@ -36,6 +36,7 @@ $(document).ready(function(){
     			dataType : "json",
     			contentType : "application/x-www-form-urlencoded",
     			success : function(jsonResponse){
+    				console.log(jsonResponse);
     				if (jsonResponse.message == "Consumer"){
     					window.location.replace("homepage_consumers.php");
     				}
@@ -44,12 +45,14 @@ $(document).ready(function(){
     				}
     			},
     			error : function(errorMessage){
+    				console.log("ERROR");
+    				console.log(errorMessage);
     				alert(errorMessage.responseText);
     			}
     		});
     	}
     });
-
+    /*
     function activeSession(){
     	var jsonToSend = {
     		"action" : "ACTIVESESSION"
@@ -68,5 +71,5 @@ $(document).ready(function(){
                 //
             }
         });
-    }
+    }*/
 });

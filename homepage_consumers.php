@@ -215,6 +215,7 @@
 
 <!-- js own scripts -->
     <script type="text/javascript" src="js/scriptSideMenu_Consumer.js"></script>
+    <script type="text/javascript" src="js/scriptHomepage_Consumer.js"></script>
 
 </body>
 </html>
