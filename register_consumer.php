@@ -105,13 +105,20 @@
                     <div class="item form-group">
                       <label for="password" class="control-label col-md-3">Password</label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="password" type="password" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
+                        <input id="p1_user" type="password" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
                       </div>
                     </div>
                     <div class="item form-group">
                       <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Confirm Password</label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="password2" type="password" name="password2" data-validate-linked="password" class="form-control col-md-7 col-xs-12" required="required">
+                        <input id="p2_user" type="password" name="password2" data-validate-linked="password" class="form-control col-md-7 col-xs-12" required="required">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="user-email">Email <span class="required">*</span>
+                      </label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input type="email" id="user-email" name="user-email" required="required" class="form-control col-md-7 col-xs-12">
                       </div>
                     </div>
                     <div class="form-group">
@@ -119,10 +126,10 @@
                       <div class="col-md-6 col-sm-6 col-xs-12">
                         <div id="gender" class="btn-group" data-toggle="buttons">
                           <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                            <input type="radio" name="gender" value="male"> &nbsp; Male &nbsp;
+                            <input id="g1" type="radio" name="gender" value="0"> &nbsp; Male &nbsp;
                           </label>
                           <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                            <input type="radio" name="gender" value="female"> Female
+                            <input id="g2" type="radio" name="gender" value="1"> Female
                           </label>
                         </div>
                       </div>
@@ -134,7 +141,6 @@
                         <div class="control">
                           <select name="dob-day" id="dob-day"  class="form-control">
                             <option value="">Day</option>
-                            <option value="">---</option>
                             <option value="01">01</option>
                             <option value="02">02</option>
                             <option value="03">03</option>
@@ -169,7 +175,6 @@
                           </select>
                           <select name="dob-month" id="dob-month"  class="form-control">
                             <option value="">Month</option>
-                            <option value="">-----</option>
                             <option value="01">January</option>
                             <option value="02">February</option>
                             <option value="03">March</option>
@@ -185,7 +190,6 @@
                           </select>
                           <select name="dob-year" id="dob-year"  class="form-control">
                             <option value="">Year</option>
-                            <option value="">----</option>
                             <option value="2012">2012</option>
                             <option value="2011">2011</option>
                             <option value="2010">2010</option>
