@@ -1,3 +1,19 @@
+
+.form-group{
+    margin-bottom: 65px;
+}
+
+.col-md-6 {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.login_content form div a {
+    font-size: 16px;
+    margin: 10px 15px 0 0;
+}
+
 #dob-day {
     width: 10%;
     float: left;
@@ -15,44 +31,3 @@
 #country_select{
     width: 48%;
 }
-
-
-body{
-            margin-top: 100px;
-            font-family: 'Trebuchet MS', serif;
-            line-height: 1.6
-        }
-        .container{
-            width: 800px;
-            margin: 0 auto;
-        }
-
-
-
-        ul.tabs{
-            margin: 0px;
-            padding: 0px;
-            list-style: none;
-        }
-        ul.tabs li{
-            background: none;
-            color: #222;
-            display: inline-block;
-            padding: 10px 15px;
-            cursor: pointer;
-        }
-
-        ul.tabs li.current{
-            background: #ededed;
-            color: #222;
-        }
-
-        .tab-content{
-            display: none;
-            background: #ededed;
-            padding: 15px;
-        }
-
-        .tab-content.current{
-            display: inherit;
-        }
