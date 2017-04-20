@@ -236,14 +236,14 @@ function attemptGetRestaurantsReviews(){
 
 }
 
-function attemptAddReviews($username, $review, $rating, $restaurantName){
+function attemptAddReviews($username, $review, $rating, $name){
 	$conn = connectionToDataBase();
 
 	if ($conn != null){
 
 		$last_id = $conn->insert_id;
 
-		$sql = "INSERT INTO restaurant_reviews (idReview, rUsername, username, reviewText, rating) VALUES ('$last_id', '$restaurantName', '$username', '$review', '$rating')";	
+		$sql = "INSERT INTO restaurant_reviews (idReview, rUsername, username, reviewText, rating) VALUES ('$last_id', '$name', '$username', '$review', '$rating')";	
 
 		$result = $conn->query($sql);
 
@@ -262,33 +262,6 @@ function attemptAddReviews($username, $review, $rating, $restaurantName){
 	}
 }
 
-function attemptLoadProfile($username){
-
-	$conn = connectionToDataBase();
-
-	if ($conn != null){
-
-		$sql = "SELECT * FROM UsersDatabase WHERE username = '$username'";
-
-		$result = $conn->query($sql);
-
-		if ($result->num_rows > 0){
-			while($row = $result->fetch_assoc()) {
-				$response = array('fName' => $row['fName'], 'lName' => $row['lName'], 'username' => $row['username'], 'email' => $row['email'], 'gender' => $row['gender'], 'country' => $row['country']); 
-			}
-			$conn -> close();
-			return array("status" => "SUCCESS", "profileData" => $response);
-		}
-		else{
-			$conn -> close();
-			return array("status" => "ERROR");
-		}
-	}
-	else{
-		$conn -> close();
-		return array("status" => "CONNECTION WITH DB WENT WRONG");
-	}
-}
 
 
 ?>
