@@ -83,7 +83,7 @@
         <!-- Bootstrap -->
         <script src="gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
         <!-- FastClick -->
-        <script src="gentelella/vgentelellaendors/fastclick/lib/fastclick.js"></script>
+        <script src="gentelella/vendors/fastclick/lib/fastclick.js"></script>
         <!-- NProgress -->
         <script src="gentelella/vendors/nprogress/nprogress.js"></script>
         <!-- bootstrap-progressbar -->
