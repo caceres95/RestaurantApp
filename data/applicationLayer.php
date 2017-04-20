@@ -16,6 +16,8 @@ switch($action){
 		break;
 	case "ENDSESSION" : endSessionFunction();
 		break;
+	case "LOADRESTAURANTS" : loadRestaurantsFunction();
+		break;
 	
 }
 
@@ -114,8 +116,9 @@ function registerRestaurantFunction(){
 		$closeHour  = $_POST["closeHour"];
 		$closeMin = $_POST["closeMin"];
 		$securityKey = $_POST["securityKey"];
+		$maxCapacity = $_POST["maxCapacity"];
 
-		$completeResult = attemptRegisterRestaurant($userName, $RestaurantName, $newUsernameRestaurant, $email, $restaurantAddress, $RestaurantPassword, $restaurantPhone, $restaurantWebpage, $openHour, $openMin, $closeHour, $closeMin, $securityKey);
+		$completeResult = attemptRegisterRestaurant($userName, $RestaurantName, $newUsernameRestaurant, $email, $restaurantAddress, $RestaurantPassword, $restaurantPhone, $restaurantWebpage, $openHour, $openMin, $closeHour, $closeMin, $securityKey, $maxCapacity);
 
 		if ($completeResult["status"] == "SUCCESS"){
 			echo json_encode(array("message" => "New record created successfully!")); 
@@ -160,6 +163,28 @@ function endSessionFunction(){
 	else {
 		header('HTTP/1.1 410 Something went wrong');
 		die("Something went wrong");
+	}
+
+}
+
+function loadRestaurantsFunction(){
+	session_start();
+
+	if(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
+
+		$result = attemptGetRestaurants();
+
+		if ($result["status"] == "SUCCESS"){
+			echo json_encode($result["arrayCommentsBox"]);
+		}
+		else {
+			header('HTTP/1.1 500' . $result["status"]);
+			die($result["status"]);
+		}
+	}
+	else {
+		header('HTTP/1.1 410 Session has expired');
+		die("Session has expired");
 	}
 
 }

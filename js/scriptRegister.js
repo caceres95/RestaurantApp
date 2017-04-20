@@ -77,6 +77,7 @@ $(document).ready(function(){
 		var $closeHour = $("#close-hour");
 		var $closeMin = $("#close-min");
 		var $securityKey = $("#security_key");
+		var $maxCapacity = $("#max_capacity");
 		var $typeUser = "manager";
 
 		if ($RestaurantName.val() == "" || $newUsernameRestaurant.val() == "" || $email.val() == "" || $restaurantAddress.val() == "" || $p1.val() == "" || $p2.val() == ""  || $restaurantPhone.val() == "" || $restaurantWebpage.val() == "" || $openHour.val()== "" || $openMin.val() == "" || $closeHour.val()== "" || $closeMin.val() == "" ) {
@@ -98,6 +99,7 @@ $(document).ready(function(){
 				"closeHour" : $closeHour.val(),
 				"closeMin" : $closeMin.val(),
 				"securityKey" : $securityKey.val(),
+				"maxCapacity" : $maxCapacity.val(),
 				"typeUser" : $typeUser
 			};   
 			console.log(jsonObject);

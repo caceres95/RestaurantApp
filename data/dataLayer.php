@@ -124,13 +124,13 @@ function attemptRegisterConsumer($userName, $userPassword, $userFirstName, $user
 
 }
 
-function attemptRegisterRestaurant($userName, $RestaurantName, $newUsernameRestaurant, $email, $restaurantAddress, $RestaurantPassword, $restaurantPhone, $restaurantWebpage, $openHour, $openMin, $closeHour, $closeMin, $securityKey){
+function attemptRegisterRestaurant($userName, $RestaurantName, $newUsernameRestaurant, $email, $restaurantAddress, $RestaurantPassword, $restaurantPhone, $restaurantWebpage, $openHour, $openMin, $closeHour, $closeMin, $securityKey, $maxCapacity){
 
 	$conn = connectionToDataBase();
 
 	if ($conn != null){
 		$last_id = $conn->insert_id;
-		$sql = "INSERT INTO restaurant_information (idRestaurant, rName, rUsername, passwrd, address, phone, email, webpage, openHour, openMin, closeHour, closeMin, securityKey) VALUES ('$last_id', '$userName', '$RestaurantName', '$newUsernameRestaurant', '$RestaurantPassword', '$restaurantAddress', '$restaurantPhone', '$email', '$restaurantWebpage', '$openHour', '$openMin', '$closeHour', '$closeMin', '$securityKey')";
+		$sql = "INSERT INTO restaurant_information (idRestaurant, rName, rUsername, passwrd, address, phone, email, webpage, openHour, openMin, closeHour, closeMin, securityKey, maxCapacity) VALUES ('$last_id', '$userName', '$RestaurantName', '$newUsernameRestaurant', '$RestaurantPassword', '$restaurantAddress', '$restaurantPhone', '$email', '$restaurantWebpage', '$openHour', '$openMin', '$closeHour', '$closeMin', '$securityKey', '$maxCapacity')";
 
 		$result = $conn->query($sql);
 
@@ -150,12 +150,12 @@ function attemptRegisterRestaurant($userName, $RestaurantName, $newUsernameResta
 
 }
 
-function attemptGetComments(){
+function attemptGetRestaurants(){
 	$conn = connectionToDataBase();
 
 	if ($conn != null){
 
-		$sql = "SELECT username, comment FROM CommentsBox";
+		$sql = "SELECT rUsername, address, webpage FROM restaurant_information";
 		$result = $conn->query($sql);
 		$commentsBox = array();
 		while($row = $result->fetch_assoc()) {
