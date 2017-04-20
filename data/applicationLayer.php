@@ -18,7 +18,8 @@ switch($action){
 		break;
 	case "LOADRESTAURANTS" : loadRestaurantsFunction();
 		break;
-	
+	case "LOADPROMOTIONS" : loadPromotionsFunction();
+		break;
 }
 
 function loginFunction(){
@@ -187,6 +188,27 @@ function loadRestaurantsFunction(){
 		die("Session has expired");
 	}
 
+}
+
+function loadPromotionsFunction(){
+	session_start();
+
+	if(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
+
+		$result = attemptGetPromotions();
+
+		if ($result["status"] == "SUCCESS"){
+			echo json_encode($result["arrayPromotions"]);
+		}
+		else {
+			header('HTTP/1.1 500' . $result["status"]);
+			die($result["status"]);
+		}
+	}
+	else {
+		header('HTTP/1.1 410 Session has expired');
+		die("Session has expired");
+	}
 }
 
 /*

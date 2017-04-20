@@ -10,7 +10,7 @@ $(document).ready(function(){
 		dataType : "json",
 		contentType : "application/x-www-form-urlencoded",
 		success: function(jsonResponse){			
-			var newHtml = "<tbody>";
+			var newHtml = "";
 			for (var i = 0; i < jsonResponse.length; i++){
 				newHtml += '<tr> <td> <th><input type="checkbox" id="check-all" class="flat"></th></td>';
 				var name = jsonResponse[i].rName;
@@ -22,7 +22,6 @@ $(document).ready(function(){
 					+ location + '</td><td>' + availability + '</td><td>' + page + '</td>';
 				newHtml += "</tr>";
 			}
-			newHtml += "</tbody>";
 			$("#datatable-checkbox").append(newHtml);
 		},
 		error: function(errorMessage){
@@ -32,3 +31,5 @@ $(document).ready(function(){
 	});
 
 });
+
+

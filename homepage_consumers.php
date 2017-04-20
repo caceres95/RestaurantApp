@@ -27,6 +27,11 @@
 
   <!-- Custom Theme Style -->
   <link href="gentelella/build/css/custom.min.css" rel="stylesheet">
+  <!-- js own scripts -->
+<script async src="gentelella/vendors/jquery/dist/jquery.min.js"></script>
+<script async type="text/javascript" src="js/scriptSideMenu_Consumer.js"></script>
+<script async type="text/javascript" src="js/scriptHomepage_Consumer.js"></script>
+
 </head>
 
 <body class="nav-md">
@@ -130,7 +135,9 @@
                         <th>Web Page</th>
                       </tr>
                     </thead>
-                  </table>
+                    <tbody  >
+                 </tbody>
+               </table>
              </div>
            </div>
          </div>
@@ -150,10 +157,6 @@
 </div>
 
 <!-- js own scripts -->
-<!-- js own scripts -->
-<script src="gentelella/vendors/jquery/dist/jquery.min.js"></script>
-<script  type="text/javascript" src="js/scriptSideMenu_Consumer.js"></script>
-<script  type="text/javascript" src="js/scriptHomepage_Consumer.js"></script>
 
 <!-- jQuery -->
 <script  src="gentelella/vendors/jquery/dist/jquery.min.js"></script>
@@ -168,12 +171,12 @@
 <!-- iCheck -->
 <script  src="gentelella/vendors/iCheck/icheck.min.js"></script>
 <!-- Datatables -->
-<script  src="gentelella/vendors/datatables.net/js/jquery.dataTables.js"></script>
-<script  src="gentelella/vendors/datatables.net-bs/js/dataTables.bootstrap.js"></script>
-<script  src="gentelella/vendors/datatables.net-buttons/js/dataTables.buttons.js"></script>
-<script  src="gentelella/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.js"></script>
-<script  src="gentelella/vendors/datatables.net-buttons/js/buttons.flash.js"></script>
-<script  src="gentelella/vendors/datatables.net-buttons/js/buttons.html5.js"></script>
+<script defer src="gentelella/vendors/datatables.net/js/jquery.dataTables.js"></script>
+<script defer src="gentelella/vendors/datatables.net-bs/js/dataTables.bootstrap.js"></script>
+<script defer src="gentelella/vendors/datatables.net-buttons/js/dataTables.buttons.js"></script>
+<script defer src="gentelella/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.js"></script>
+<script defer src="gentelella/vendors/datatables.net-buttons/js/buttons.flash.js"></script>
+<script defer src="gentelella/vendors/datatables.net-buttons/js/buttons.html5.js"></script>
 <script  src="gentelella/vendors/datatables.net-buttons/js/buttons.print.js"></script>
 <script  src="gentelella/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.js"></script>
 <script  src="gentelella/vendors/datatables.net-keytable/js/dataTables.keyTable.js"></script>

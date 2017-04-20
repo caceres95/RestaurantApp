@@ -171,6 +171,28 @@ function attemptGetRestaurants(){
 	}
 }
 
+function attemptGetPromotions(){
+	$conn = connectionToDataBase();
+
+	if ($conn != null){
+
+		$sql = "SELECT rName, name, descriptions, imageURL FROM restaurant_information, promotions WHERE restaurant_information.rUsername = promotions.rUsername";
+		$result = $conn->query($sql);
+		$commentsBox = array();
+		while($row = $result->fetch_assoc()) {
+			$response = array('rName' => $row['rName'], 'name' => $row['name'], 'descriptions' => $row['descriptions'], 'imageURL' => $row['imageURL']);  
+			array_push($commentsBox, $response);
+		}
+		$conn -> close();
+		return array("status" => "SUCCESS", "arrayPromotions" => $commentsBox);
+	}
+	else{
+		$conn -> close();
+		return array("status" => $result);
+	}
+
+}
+
 function attemptAddComments($username, $comment){
 
 	$conn = connectionToDataBase();
