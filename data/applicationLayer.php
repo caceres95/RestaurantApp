@@ -41,7 +41,7 @@ function loginFunction(){
 		$_SESSION['loginTime'] = time();
 		$_SESSION['typeUser'] = $typeUser;
 
-		echo json_encode(array("message" => "consumer"));
+		echo json_encode(array("message" => $typeUser));
 	}	
 	else{
 		header('HTTP/1.1 500' . $result["status"]);

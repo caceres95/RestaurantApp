@@ -11,6 +11,7 @@ $(document).ready(function(){
     $("#loginButton").on("click", function(){
     	var $userName = $("#userName");
     	var $password = $("#password");
+        var $typeuser;
     	if ($userName.val() == "" || $password.val() == "" || (!(($("#t1").is(":checked") || $("#t2").is(":checked"))))){
     		alert("Please insert username and password");
     	}
