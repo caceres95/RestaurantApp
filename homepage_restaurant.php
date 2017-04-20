@@ -81,7 +81,7 @@
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="javascript:;"> Profile</a></li>
-                    <li><a href="index.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li id="log_out_button"><a href="index.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
 
