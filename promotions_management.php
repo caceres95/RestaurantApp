@@ -28,7 +28,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-cutlery"></i> <span>Restaurant App</span></a>
+              <a href="homepage_restaurant.php" class="site_title"><i class="fa fa-cutlery"></i> <span>Restaurant App</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -114,7 +114,7 @@
                               <p>Your Text</p>
                               <div class="tools tools-bottom">
                                 <a href="#"><i class="fa fa-link"></i></a>
-                                <a href="#"><i class="fa fa-pencil"></i></a>
+                                <a href="edit_promotion.php"><i class="fa fa-pencil"></i></a>
                                 <a href="#"><i class="fa fa-times"></i></a>
                               </div>
                             </div>
@@ -132,7 +132,7 @@
                               <p>Your Text</p>
                               <div class="tools tools-bottom">
                                 <a href="#"><i class="fa fa-link"></i></a>
-                                <a href="#"><i class="fa fa-pencil"></i></a>
+                                <a href="edit_promotion.php"><i class="fa fa-pencil"></i></a>
                                 <a href="#"><i class="fa fa-times"></i></a>
                               </div>
                             </div>
@@ -150,7 +150,7 @@
                               <p>Your Text</p>
                               <div class="tools tools-bottom">
                                 <a href="#"><i class="fa fa-link"></i></a>
-                                <a href="#"><i class="fa fa-pencil"></i></a>
+                                <a href="edit_promotion.php"><i class="fa fa-pencil"></i></a>
                                 <a href="#"><i class="fa fa-times"></i></a>
                               </div>
                             </div>
@@ -158,6 +158,13 @@
                           <div class="caption">
                             <p>Description</p>
                           </div>
+                        </div>
+                      </div>
+                      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <a href="edit_promotion.php"> <button class="btn btn-primary" type="button" id="add_promotion">Add Promotion</button></a>
                         </div>
                       </div>
                     </div>
