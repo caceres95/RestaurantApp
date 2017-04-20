@@ -2600,13 +2600,13 @@ if (typeof NProgress != 'undefined') {
 				Morris.Bar({
 				  element: 'graph_bar',
 				  data: [
-					{device: 'Lunes', Visits: 96},
-					{device: 'Martes', Visits: 60},
-					{device: 'Miercoles', Visits: 100},
-					{device: 'Jueves', Visits: 80},
-					{device: 'Viernes', Visits: 420},
-					{device: 'Sabado', Visits: 360},
-					{device: 'Domingo', Visits: 230}
+					{device: 'Monday', Visits: 96},
+					{device: 'Tuesday', Visits: 60},
+					{device: 'Wednesday', Visits: 100},
+					{device: 'Thursday', Visits: 80},
+					{device: 'Friday', Visits: 420},
+					{device: 'Saturday', Visits: 360},
+					{device: 'Sunday', Visits: 230}
 				  ],
 				  xkey: 'device',
 				  ykeys: ['Visits'],
