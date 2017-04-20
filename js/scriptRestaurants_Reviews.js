@@ -10,9 +10,10 @@ $(document).ready(function(){
         dataType : "json",
         contentType : "application/x-www-form-urlencoded",
         success : function(jsonResponse){
+            console.log(jsonResponse);
             for(var i = 0; i < jsonResponse.length; i++){
-                $("#customersReviewsBody").append(
-                    '<tr> <td>' + jsonResponse[i].rName + '<tr> <td>' + jsonResponse[i].rating +'</td> <td>' + jsonResponse[i].review + '</td> <td>' + jsonResponse[i].username + '</td> </tr>');
+                $("#restaurantReviewsBody").append(
+                    '<tr> <td>' + jsonResponse[i].rName + '</td><td>' + jsonResponse[i].rating +'</td> <td>' + jsonResponse[i].reviewText + '</td> <td>' + jsonResponse[i].username + '</td> </tr>');
             }
         },
         error : function(errorMessage){

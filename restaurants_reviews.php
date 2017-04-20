@@ -115,7 +115,7 @@
                   <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
-                 <table id="datatable" class="table table-striped table-bordered">
+                 <table class="table table-striped table-bordered">
                   <thead>
                     <tr>
                       <th>Restaurant</th>
@@ -124,7 +124,7 @@
                       <th>Username</th>
                     </tr>
                   </thead>
-                  <tbody id="restaurantsReviewsBody">
+                  <tbody id="restaurantReviewsBody">
                   </tbody>
                 </table>
               </div>

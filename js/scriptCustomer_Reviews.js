@@ -10,7 +10,6 @@ $(document).ready(function(){
         dataType : "json",
         contentType : "application/x-www-form-urlencoded",
         success : function(jsonResponse){
-            alert("HELLO");
             for(var i = 0; i < jsonResponse.length; i++) {
                 $("#customersReviewsBody").append(
                     '<tr> <td>' + jsonResponse[i].username + '</td> <td>' + jsonResponse[i].reviewText + '</td> <td>' + jsonResponse[i].rating + '</td> </tr>');

@@ -268,9 +268,9 @@ function insertUserReviewFunction(){
 		$username = $_SESSION['user'];
 		$review = $_POST['review'];
 		$rating = $_POST['rating'];
-		$restaurant = $_POST['restaurantName'];
+		$name = $_POST['restaurantName'];
 
-		$result = attemptAddReviews($username, $review, $rating, $restaurantName);
+		$result = attemptAddReviews($username, $review, $rating, $name);
 
 		if ($result["status"] == "SUCCESS"){
 			echo json_encode(array("review" => $review, "username" => $username, "name" => $name,"rating" => $rating, "message" => "Comment added succesfully!"));
