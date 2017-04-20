@@ -20,6 +20,12 @@ switch($action){
 		break;
 	case "LOADPROMOTIONS" : loadPromotionsFunction();
 		break;
+	case "GETCUSTOMERSREVIEWS" : getCustomersReviewsFunctions();
+		break;
+	case "GETRESTAURANTSREVIEWS" : getRestaurantsReviews();
+		break;
+	case "INSRTUSERREVIEW" : insertUserReviewFunction();
+		break;
 }
 
 function loginFunction(){
@@ -211,17 +217,15 @@ function loadPromotionsFunction(){
 	}
 }
 
-/*
-function getCommentsFunction(){
-
+function getCustomersReviewsFunctions(){
 	session_start();
 
 	if(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
 
-		$result = attemptGetComments();
+		$result = attemptGetCustomersReviews();
 
 		if ($result["status"] == "SUCCESS"){
-			echo json_encode($result["arrayCommentsBox"]);
+			echo json_encode($result["arrayCustomersReviews"]);
 		}
 		else {
 			header('HTTP/1.1 500' . $result["status"]);
@@ -234,19 +238,42 @@ function getCommentsFunction(){
 	}
 }
 
-function addCommentFunction(){
+function getRestaurantsReviews(){
+	session_start();
 
+	if(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
+
+		$result = attemptGetRestaurantsReviews();
+
+		if ($result["status"] == "SUCCESS"){
+			echo json_encode($result["arrayRestaurantsReviews"]);
+		}
+		else {
+			header('HTTP/1.1 500' . $result["status"]);
+			die($result["status"]);
+		}
+	}
+	else {
+		header('HTTP/1.1 410 Session has expired');
+		die("Session has expired");
+	}
+
+}
+
+function insertUserReviewFunction(){
 	session_start();
 
 	if(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
 
 		$username = $_SESSION['user'];
-		$comment = $_POST['comment'];
+		$review = $_POST['review'];
+		$rating = $_POST['rating'];
+		$restaurant = $_POST['restaurantName'];
 
-		$result = attemptAddComments($username, $comment);
+		$result = attemptAddReviews($username, $review, $rating, $restaurantName);
 
 		if ($result["status"] == "SUCCESS"){
-			echo json_encode(array("comment" => $comment, "username" => $username, "message" => "Comment added succesfully!"));
+			echo json_encode(array("review" => $review, "username" => $username, "name" => $name,"rating" => $rating, "message" => "Comment added succesfully!"));
 		}	
 		else{
 			header('HTTP/1.1 500' . $result["status"]);
@@ -257,230 +284,8 @@ function addCommentFunction(){
 		header('HTTP/1.1 410 Session has expired');
 		die("Session has expired");
 	}
-}
-
-function loadProfileFunction(){
-
-	session_start();
-
-	if(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
-
-		$username = $_SESSION['user'];
-
-		$result = attemptLoadProfile($username);
-
-		if ($result["status"] == "SUCCESS"){
-			echo json_encode($result["profileData"]);
-		}
-		else {
-			header('HTTP/1.1 500' . $result["status"]);
-			die($result["status"]);
-		}
-	}
-	else {
-		header('HTTP/1.1 410 Session has expired');
-		die("Session has expired");
-	}
 
 }
-
-function activeSessionFunction(){
-
-	session_start();
-
-	if(isset($_SESSION['user']) && $_SESSION['typeUser'] == "consumer"  && time() - $_SESSION['loginTime'] < 1800){ 
-		echo json_encode(array("message" => "Consumer"));
-	}
-	elseif(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
-		echo json_encode(array("message" => "Manager"));
-	}
-	else {
-		header('HTTP/1.1 410 Session has expired');
-		die("Session has expired");
-	}
-}
-
-function endSessionFunction(){
-
-	session_start();
-	
-	if(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
-		session_unset();
-		session_destroy();
-		echo json_encode(array("message" => "End Session"));
-	}
-	else {
-		header('HTTP/1.1 410 Something went wrong');
-		die("Something went wrong");
-	}
-
-}
-
-function getFriendsFunction(){
-	session_start();
-
-	if(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
-
-		$username = $_SESSION['user'];
-
-		$result = attemptGetFriends($username);
-
-		if ($result["status"] == "SUCCESS"){
-			echo json_encode($result["arrayFriendsList"]);
-		}
-		else {
-			header('HTTP/1.1 500' . $result["status"]);
-			die($result["status"]);
-		}
-	}
-	else {
-		header('HTTP/1.1 410 Session has expired');
-		die("Session has expired");
-	}
-}
-
-function searchUsersFunction(){
-	session_start();
-
-	if(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
-
-		$username = $_SESSION['user'];
-		$searchBox = $_COOKIE['search'];
-
-		$result = attemptSearchUsers($username, $searchBox);
-
-		if ($result["status"] == "SUCCESS"){
-			echo json_encode($result["arrayUsersList"]);
-		}
-		else {
-			header('HTTP/1.1 500' . $result["status"]);
-			die($result["status"]);
-		}
-	}
-	else {
-		header('HTTP/1.1 410 Session has expired');
-		die("Session has expired");
-	}
-
-}
-
-function createSearchCookie(){
-	session_start();
-
-	if(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
-
-		$searchBox = $_POST['searchUser'];
-
-		setcookie("search", "$searchBox", time() + 20, "/", "",0);
-		echo json_encode(array("message" => "SUCCESS"));
-	}
-	else {
-		header('HTTP/1.1 410 Session has expired');
-		die("Session has expired");
-	}
-
-}
-
-function getFriendsRequestFunction(){
-	session_start();
-
-	if(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
-
-		$username = $_SESSION['user'];
-
-		$result = attemptGetFriendsRequests($username);
-
-		if ($result["status"] == "SUCCESS"){
-			echo json_encode($result["arrayFriendsList"]);
-		}
-		else {
-			header('HTTP/1.1 500' . $result["status"]);
-			die($result["status"]);
-		}
-	}
-	else {
-		header('HTTP/1.1 410 Session has expired');
-		die("Session has expired");
-	}
-
-}
-
-function acceptFriendsRequestFunction(){
-	session_start();
-
-	if(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
-
-		$username = $_SESSION['user'];
-		$newFriendUsername = $_POST['username'];
-
-		$result = attemptAcceptFriends($username, $newFriendUsername);
-
-		if ($result["status"] == "SUCCESS"){
-			echo json_encode(array("message" => "FRIEND ADDED"));
-		}
-		else {
-			header('HTTP/1.1 500' . $result["status"]);
-			die($result["status"]);
-		}
-	}
-	else {
-		header('HTTP/1.1 410 Session has expired');
-		die("Session has expired");
-	}
-
-}
-
-function declineFriendsRequestFunction(){
-
-	session_start();
-
-	if(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
-
-		$username = $_SESSION['user'];
-		$newUsername = $_POST['username'];
-
-		$result = attemptDeclineFriends($username, $newUsername);
-
-		if ($result["status"] == "SUCCESS"){
-			echo json_encode(array("message" => "FRIEND REQUEST DECLINED"));
-		}
-		else {
-			header('HTTP/1.1 500' . $result["status"]);
-			die($result["status"]);
-		}
-	}
-	else {
-		header('HTTP/1.1 410 Session has expired');
-		die("Session has expired");
-	}
-
-}
-
-function addNewFriends(){
-	session_start();
-
-	if(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
-
-		$username = $_SESSION['user'];
-		$newUsername = $_POST['username'];
-
-		$result = attemptSendFriendRequest($username, $newUsername);
-
-		if ($result["status"] == "SUCCESS"){
-			echo json_encode(array("message" => "FRIEND REQUEST SENT"));
-		}
-		else {
-			header('HTTP/1.1 500' . $result["status"]);
-			die($result["status"]);
-		}
-	}
-	else {
-		header('HTTP/1.1 410 Session has expired');
-		die("Session has expired");
-	}
-
-}*/
-
 
 
 

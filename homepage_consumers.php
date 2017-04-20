@@ -27,10 +27,6 @@
 
   <!-- Custom Theme Style -->
   <link href="gentelella/build/css/custom.min.css" rel="stylesheet">
-  <!-- js own scripts -->
-<script async src="gentelella/vendors/jquery/dist/jquery.min.js"></script>
-<script async type="text/javascript" src="js/scriptSideMenu_Consumer.js"></script>
-<script async type="text/javascript" src="js/scriptHomepage_Consumer.js"></script>
 
 </head>
 
@@ -51,8 +47,8 @@
               <img src="gentelella/production/images/img.jpg" alt="..." class="img-circle profile_img">
             </div>
             <div class="profile_info">
-              <span>Welcome,</span>
-              <h2>John Doe</h2>
+              <span>Welcome</span>
+              <h2></h2>
             </div>
           </div>
           <!-- /menu profile quick info -->
@@ -166,6 +162,8 @@
 
 <!-- jQuery -->
 <script  src="gentelella/vendors/jquery/dist/jquery.min.js"></script>
+<script async type="text/javascript" src="js/scriptSideMenu_Consumer.js"></script>
+<script async type="text/javascript" src="js/scriptHomepage_Consumer.js"></script>
 
 
 <!-- Bootstrap -->
@@ -194,7 +192,7 @@
 <script  src="gentelella/vendors/pdfmake/build/vfs_fonts.js"></script>
 
 <!-- Custom Theme Scripts -->
-<script  src="gentelella/build/js/custom.min.js"></script>
+<!script src="gentelella/build/js/custom.min.js"><!/script>
 
 </body>
 </html>

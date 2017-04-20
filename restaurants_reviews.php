@@ -45,8 +45,8 @@
               <img src="gentelella/production/images/img.jpg" alt="..." class="img-circle profile_img">
             </div>
             <div class="profile_info">
-              <span>Welcome,</span>
-              <h2>John Doe</h2>
+              <span>Welcome</span>
+              <h2></h2>
             </div>
           </div>
           <!-- /menu profile quick info -->
@@ -123,7 +123,6 @@
                       <th>Rating</th>
                       <th>Review</th>
                       <th>Username</th>
-                      <th>Date</th>
                     </tr>
                   </thead>
                   <tbody id="restaurantsReviewsBody">
@@ -131,6 +130,18 @@
                 </table>
               </div>
             </div>
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="rating">Restaurant </label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="btn-toolbar">
+                  <div class="btn-group-review">
+                    <input type="text" id="restaurant_r">
+                  </div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+              <br>
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12">Add Review</label>
               <div class="col-md-9 col-sm-9 col-xs-12">
@@ -145,11 +156,7 @@
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="btn-toolbar">
                   <div class="btn-group-review">
-                    <button class="btn btn-info" type="button">1</button>
-                    <button class="btn btn-info" type="button">2</button>
-                    <button class="btn btn-info" type="button">3</button>
-                    <button class="btn btn-info" type="button">4</button>
-                    <button class="btn btn-info" type="button">5</button>
+                    <input type="number" id="rating" max="5" min="1">
                   </div>
                 </div>
               </div>
@@ -206,7 +213,7 @@
   <script src="gentelella/vendors/pdfmake/build/vfs_fonts.js"></script>
 
   <!-- Custom Theme Scripts -->
-  <script src="gentelella/build/js/custom.min.js"></script>
+  <!script src="gentelella/build/js/custom.min.js"><!/script>
 
   <!-- js own scripts -->
     <script type="text/javascript" src="js/scriptSideMenu_Consumer.js"></script>
