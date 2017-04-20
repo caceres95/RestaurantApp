@@ -155,15 +155,15 @@ function attemptGetRestaurants(){
 
 	if ($conn != null){
 
-		$sql = "SELECT rUsername, address, webpage FROM restaurant_information";
+		$sql = "SELECT rName, address, webpage, maxCapacity, AVG(rating) AS rating FROM restaurant_information, restaurant_reviews WHERE restaurant_reviews.rUsername = restaurant_information.rUsername";
 		$result = $conn->query($sql);
 		$commentsBox = array();
 		while($row = $result->fetch_assoc()) {
-			$response = array('username' => $row['username'], 'comment' => $row['comment']);  
+			$response = array('rName' => $row['rName'], 'address' => $row['address'], 'webpage' => $row['webpage'], 'maxCapacity' => $row['maxCapacity'], 'rating' => $row['rating']);  
 			array_push($commentsBox, $response);
 		}
 		$conn -> close();
-		return array("status" => "SUCCESS", "arrayCommentsBox" => $commentsBox);
+		return array("status" => "SUCCESS", "arrayRestaurants" => $commentsBox);
 	}
 	else{
 		$conn -> close();

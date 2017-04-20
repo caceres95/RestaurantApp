@@ -175,7 +175,7 @@ function loadRestaurantsFunction(){
 		$result = attemptGetRestaurants();
 
 		if ($result["status"] == "SUCCESS"){
-			echo json_encode($result["arrayCommentsBox"]);
+			echo json_encode($result["arrayRestaurants"]);
 		}
 		else {
 			header('HTTP/1.1 500' . $result["status"]);

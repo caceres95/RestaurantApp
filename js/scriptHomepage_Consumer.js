@@ -12,12 +12,12 @@ $(document).ready(function(){
 		success: function(jsonResponse){			
 			var newHtml = "";
 			for (var i = 0; i < jsonResponse.length; i++){
-				newHtml += '<tr> <td> <th><input type="checkbox" id="check-all" class="flat"></th></td><td>';
-				var name = jsonResponse[i].username;
-				var rating = jsonResponse[i].comment;
-				var location = jsonResponse[i].comment;
-				var availability = jsonResponse[i].comment;
-				var page = jsonResponse[i].comment;
+				newHtml += '<tr> <td> <th><input type="checkbox" id="check-all" class="flat"></th></td>';
+				var name = jsonResponse[i].rName;
+				var rating = jsonResponse[i].rating;
+				var location = jsonResponse[i].address;
+				var availability = jsonResponse[i].maxCapacity - 5;
+				var page = jsonResponse[i].webpage;
 				newHtml += '<td>' + name + '</td><td>' + rating + '</td><td>' 
 					+ location + '</td><td>' + availability + '</td><td>' + page + '</td><td>';
 				newHtml += "</tr>";
