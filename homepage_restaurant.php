@@ -20,6 +20,10 @@
 
     <!-- Custom Theme Style -->
     <link href="gentelella/build/css/custom.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- js own scripts -->
+    <script type="text/javascript" src="js/scriptHomepage_Restaurant.js"></script>
+
   </head>
 
   <body class="nav-md">
@@ -134,7 +138,7 @@
                               <i class="fa fa-user aero"></i>
                             </a>
                             <div class="media-body">
-                              <a class="title" href="#">Mary Jane</a>
+                              <a class="title" href="#">Carlos Cáceres</a>
                               <p><strong>Visits: </strong> 16 </p>
                             </div>
                           </li>
@@ -143,8 +147,8 @@
                               <i class="fa fa-user green"></i>
                             </a>
                             <div class="media-body">
-                              <a class="title" href="#">Ms. Mary Jane</a>
-                              <p><strong>Visits: </strong> 16 </p>
+                              <a class="title" href="#">Caro Romo</a>
+                              <p><strong>Visits: </strong> 13 </p>
                             </div>
                           </li>
                           <li class="media event">
@@ -152,8 +156,8 @@
                               <i class="fa fa-user blue"></i>
                             </a>
                             <div class="media-body">
-                              <a class="title" href="#">Ms. Mary Jane</a>
-                              <p><strong>Visits: </strong> 16 </p>
+                              <a class="title" href="#">Paola Villarreal</a>
+                              <p><strong>Visits: </strong> 10 </p>
                             </div>
                           </li>
                           <li class="media event">
@@ -161,20 +165,8 @@
                               <i class="fa fa-user aero"></i>
                             </a>
                             <div class="media-body">
-                              <a class="title" href="#">Ms. Mary Jane</a>
-                              <p><strong>Visits: </strong> 16 </p>
-                              <p> <small>12 Sales Today</small>
-                              </p>
-                            </div>
-                          </li>
-                          <li class="media event">
-                            <a class="pull-left border-green profile_thumb">
-                              <i class="fa fa-user green"></i>
-                            </a>
-                            <div class="media-body">
-                              <a class="title" href="#">Ms. Mary Jane</a>
-                              <p><strong>Visits: </strong> 16 </p>
-                              <p> <small>12 Sales Today</small>
+                              <a class="title" href="#">Alfredo Sanchez</a>
+                              <p><strong>Visits: </strong> 8 </p>
                               </p>
                             </div>
                           </li>
