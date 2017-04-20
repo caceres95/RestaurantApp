@@ -258,7 +258,7 @@
     <script src="gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
     
     <!-- Custom Theme Scripts -->
-    <script src="gentelella/build/js/custom.min.js"></script>
+    <script src="gentelella/build/js/custom.js"></script>
 
     <!-- js own scripts -->
     <script type="text/javascript" src="js/scriptSideMenu_Manager.js"></script>
