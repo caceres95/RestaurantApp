@@ -60,7 +60,6 @@
                 <li id="homapage_list_consumer" ><a><i class="fa fa-home"  ></i> Homepage </a> </li>
                 <li id="restaurant_reviews_list_consumer"><a><i class="fa fa-edit"></i> Restaurants Reviews </a> </li>
                 <li id="promotions_list_consumer"><a><i class="fa fa-star"></i> Promotions </a></li>
-                <li id="restaurant_profile_consumer"><a><i class="fa fa-cutlery"></i> Restaurants Profile </a> </li>
               </ul>
             </div>
           </div>
