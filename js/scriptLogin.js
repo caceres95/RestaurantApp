@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    //activeSession(); // Redirect to homepage if the session is active
+    activeSession(); // Redirect to homepage if the session is active
 
     $("#password").keyup(function(event){
     	if(event.keyCode == 13){
@@ -51,7 +51,7 @@ $(document).ready(function(){
     		});
     	}
     });
-    /*
+    
     function activeSession(){
     	var jsonToSend = {
     		"action" : "ACTIVESESSION"
@@ -64,11 +64,17 @@ $(document).ready(function(){
     		dataType : "json",
     		contentType : "application/x-www-form-urlencoded",
     		success : function(jsonResponse){
-    			window.location.replace("home.php");
+    			console.log(jsonResponse.message);
+    			if (jsonResponse.message == "consumer"){
+    				window.location.replace("homepage_consumers.php");
+    			}
+    			else {
+    				window.location.replace("homepage_restaurant.php");
+    			}
     		},
     		error : function(errorMessage){
                 //
             }
         });
-    }*/
+    }
 });

@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS `restaurant_information` (
     openMin INT(5) NOT NULL,
     closeHour INT(5) NOT NULL,
     closeMin INT(5) NOT NULL,
+    securityKey VARCHAR(50) NOT NULL,
     UNIQUE (rUsername)
 );
 
@@ -103,10 +104,10 @@ INSERT INTO `user_information` (`idUser`, `fName`, `lName`, `username`, `passwrd
 -- (19,'Susy', 'Berrones', 'SusyB', 'susyf', 'susyflor@gmail.com', 'Italy', 'female'),
 -- (20,'Pamela', 'Rodriguez', 'thePam22', '22mapeht', 'pame@gmail.com', 'Mexico', 'female');
 
-INSERT INTO `restaurant_information` (`rName`, `rUsername`, `passwrd`, `address`, `phone`, `email`, `webpage`, `openHour`, `openMin`, `closeHour`, `closeMin`) VALUES
-("Carl's Jr.", "carlsjr", "mcsucks", "Humberto Lobo 1015", 81203045, "carlsjr@hotmail.com", "www.carlsjr.com", 8, 30, 23, 0),
-("Mr. Brown", "mrbrown", "white", "Eugenio Garza Sada 123", 81301243, "mrbrown@hotmail.com", "www.mrbrown.com", 9, 0, 22, 0),
-("Buffalo Wild Wings", "bww", "alitas", "Alfonso Reyes 345", 83046869, "bww@hotmail.com", "www.bww.com", 8, 30, 22, 0);
+INSERT INTO `restaurant_information` (`rName`, `rUsername`, `passwrd`, `address`, `phone`, `email`, `webpage`, `openHour`, `openMin`, `closeHour`, `closeMin`, `securityKey`) VALUES
+("Carl's Jr.", "carlsjr", "mcsucks", "Humberto Lobo 1015", 81203045, "carlsjr@hotmail.com", "www.carlsjr.com", 8, 30, 23, 0, "1a2s3d4f5g6h14g"),
+("Mr. Brown", "mrbrown", "white", "Eugenio Garza Sada 123", 81301243, "mrbrown@hotmail.com", "www.mrbrown.com", 9, 0, 22, 0, "9a1f3d4t5g6k33e"),
+("Buffalo Wild Wings", "bww", "alitas", "Alfonso Reyes 345", 83046869, "bww@hotmail.com", "www.bww.com", 8, 30, 22, 0, "673ftd4f5gutubn");
 
 INSERT INTO `promotions` (`rUsername`, `name`, `descriptions`, `imageURL`, `startDay`, `startMonth`, `startYear`, `endDay`, `endMonth`, `endYear`) VALUES
 ("carlsjr", "2x1 burgers", "Pay one burger, get two!", "images/carlsjr/promo1.jpg", 3, 1, 2017, 31, 1, 2017),
@@ -132,6 +133,6 @@ INSERT INTO `consumer_visits` (`rUsername`, `username`,`timeArrived`, `timeLeft`
 ('carlsjr', 'alfredo08', '2017-04-19 10:14:30', '2017-04-19 12:30:00'),
 ('carlsjr', 'cbca', '2017-04-13 16:00:00', '2017-04-13 17:00:00'),
 ('carlsjr', 'caroromo1', '2017-04-26 12:00:00', '2017-04-26 13:00:00'),
-('buffalo', 'alfredo08', '2017-04-19 10:14:30', '2017-04-19 12:30:00');
+('bww', 'alfredo08', '2017-04-19 10:14:30', '2017-04-19 12:30:00');
 
 

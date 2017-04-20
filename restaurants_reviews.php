@@ -34,7 +34,7 @@
       <div class="col-md-3 left_col">
         <div class="left_col scroll-view">
           <div class="navbar nav_title" style="border: 0;">
-            <a href="homepage_restaurant.php" class="site_title"><i class="fa fa-cutlery"></i> <span>Restaurant App </span></a>
+            <a href="homepage_consumers.php" class="site_title"><i class="fa fa-cutlery"></i> <span>Restaurant App </span></a>
           </div>
 
           <div class="clearfix"></div>
@@ -85,7 +85,7 @@
                 </a>
                 <ul class="dropdown-menu dropdown-usermenu pull-right">
                   <li><a href="consumer_profile.php"> Profile</a></li>
-                  <li><a href="index.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  <li id="log_out_button"><a href="index.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                 </ul>
               </li>
 

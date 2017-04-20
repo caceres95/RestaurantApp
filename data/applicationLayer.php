@@ -8,6 +8,14 @@ $action = $_POST["action"];
 switch($action){
 	case "LOGIN" : loginFunction();
 		break;
+	case "REGISTERCONSUMER" : registerConsumerFunction();
+		break;
+	case "REGISTERRESTAURANT" : registerRestaurantFunction();
+		break;
+	case "ACTIVESESSION" : activeSessionFunction();
+		break;
+	case "ENDSESSION" : endSessionFunction();
+		break;
 	
 }
 
@@ -26,7 +34,6 @@ function loginFunction(){
 			setcookie("user", "$userName", time() + (86400 * 30), "/", "", 0);
 		}
 
-
 		session_start();
 		$_SESSION['user'] = $userName;
 		$_SESSION['loginTime'] = time();
@@ -40,17 +47,19 @@ function loginFunction(){
 	}	
 }
 
-/*function registerFunction(){
+function registerConsumerFunction(){
 
 	$userName = $_POST['username'];
+	$typeUser = $_POST['typeUser'];
 
-	$result = attemptValidateUser($userName);
+	$result = attemptValidateUser($userName, $typeUser);
 
 	if ($result["status"] == "SUCCESS"){
 
 		session_start();
 		$_SESSION['user'] = $userName;
 		$_SESSION['loginTime'] = time();
+		$_SESSION['typeUser'] = $typeUser;
 
 		$userPassword = $_POST['userPassword1'];
 		$userFirstName = $_POST['userFirstName'];
@@ -58,9 +67,11 @@ function loginFunction(){
 		$userEmail = $_POST['userEmail'];
 		$userCountry= $_POST['userCountry'];
 		$userGender= $_POST['userGender'];
-		$userName = $_POST['username'];
+		$userBDay = $_POST['day'];
+		$userBMonth = $_POST['month'];
+		$userBYear = $_POST['year'];
 
-		$completeResult = attemptRegister($userName, $userPassword, $userFirstName, $userLastName, $userEmail, $userCountry, $userGender);
+		$completeResult = attemptRegisterConsumer($userName, $userPassword, $userFirstName, $userLastName, $userEmail, $userCountry, $userGender, $userBDay, $userBMonth, $userBYear);
 
 		if ($completeResult["status"] == "SUCCESS"){
 			echo json_encode(array("message" => "New record created successfully!")); 
@@ -77,6 +88,83 @@ function loginFunction(){
 	}
 }
 
+function registerRestaurantFunction(){
+
+	$userName = $_POST['newUsernameRestaurant'];
+	$typeUser = $_POST['typeUser'];
+
+	$result = attemptValidateUser($userName, $typeUser);
+
+	if ($result["status"] == "SUCCESS"){
+
+		session_start();
+		$_SESSION['user'] = $userName;
+		$_SESSION['loginTime'] = time();
+		$_SESSION['typeUser'] = $typeUser;
+
+		$RestaurantName = $_POST["RestaurantName"];
+		$newUsernameRestaurant = $_POST["newUsernameRestaurant"];
+		$email = $_POST["RestaurantEmail"];
+		$restaurantAddress = $_POST["restaurantAddress"];
+		$RestaurantPassword = $_POST["RestaurantPassword1"];
+		$restaurantPhone = $_POST["restaurantPhone"];
+		$restaurantWebpage = $_POST["restaurantWebpage"];
+		$openHour = $_POST["openHour"];
+		$openMin = $_POST["openMin"];
+		$closeHour  = $_POST["closeHour"];
+		$closeMin = $_POST["closeMin"];
+		$securityKey = $_POST["securityKey"];
+
+		$completeResult = attemptRegisterRestaurant($userName, $RestaurantName, $newUsernameRestaurant, $email, $restaurantAddress, $RestaurantPassword, $restaurantPhone, $restaurantWebpage, $openHour, $openMin, $closeHour, $closeMin, $securityKey);
+
+		if ($completeResult["status"] == "SUCCESS"){
+			echo json_encode(array("message" => "New record created successfully!")); 
+
+		}
+		else {
+			header('HTTP/1.1 500' . $result["status"]);
+			die($completeResult["status"]);
+		}
+	}
+	else{
+		header('HTTP/1.1 500' . $result["status"]);
+		die($result["status"]);
+	}
+}
+
+function activeSessionFunction(){
+
+	session_start();
+
+	if(isset($_SESSION['user']) && $_SESSION['typeUser'] == "consumer"  && time() - $_SESSION['loginTime'] < 1800){ 
+		echo json_encode(array("message" => "consumer"));
+	}
+	elseif(isset($_SESSION['user']) && $_SESSION['typeUser'] == "manager" && time() - $_SESSION['loginTime'] < 1800){ 
+		echo json_encode(array("message" => "manager"));
+	}
+	else {
+		header('HTTP/1.1 410 Session has expired');
+		die("Session has expired");
+	}
+}
+
+function endSessionFunction(){
+
+	session_start();
+	
+	if(isset($_SESSION['user']) && time() - $_SESSION['loginTime'] < 1800){ 
+		session_unset();
+		session_destroy();
+		echo json_encode(array("message" => "End Session"));
+	}
+	else {
+		header('HTTP/1.1 410 Something went wrong');
+		die("Something went wrong");
+	}
+
+}
+
+/*
 function getCommentsFunction(){
 
 	session_start();

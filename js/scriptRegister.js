@@ -4,7 +4,6 @@ $(document).ready(function(){
 	});
 
 	$("#register_button_consumer").on("click", function(){
-		console.log("HOLA");
 		var $firstName = $("#firstName");
 		var $lastName = $("#lastName");
 		var $newUserName = $("#newusername");
@@ -16,6 +15,7 @@ $(document).ready(function(){
 		var $day = $("#dob-day");
 		var $month = $("#dob-month");
 		var $year = $("#dob-year");
+		var $typeUser = "consumer";
 
 		if ($firstName.val() == "" || $lastName.val() == "" || $newUserName.val() == "" || $email.val() == "" || $p1.val() == "" || $p2.val() == ""  || $country.val() == 0  || (!(($("#g1").is(":checked") || $("#g2").is(":checked")))) || $day.val()== "" || $month.val()== "" || $year.val() == "" ) {
 			alert("Please add the information needed");
@@ -40,7 +40,8 @@ $(document).ready(function(){
 				"userGender" : $gender,
 				"day" : $day.val(),
 				"month" : $month.val(),
-				"year" : $year.val()
+				"year" : $year.val(),
+				"typeUser" : $typeUser
 
 			};   
 			console.log(jsonObject);
@@ -76,6 +77,7 @@ $(document).ready(function(){
 		var $closeHour = $("#close-hour");
 		var $closeMin = $("#close-min");
 		var $securityKey = $("#security_key");
+		var $typeUser = "manager";
 
 		if ($RestaurantName.val() == "" || $newUsernameRestaurant.val() == "" || $email.val() == "" || $restaurantAddress.val() == "" || $p1.val() == "" || $p2.val() == ""  || $restaurantPhone.val() == "" || $restaurantWebpage.val() == "" || $openHour.val()== "" || $openMin.val() == "" || $closeHour.val()== "" || $closeMin.val() == "" ) {
 			alert("Please add the information needed");
@@ -95,7 +97,8 @@ $(document).ready(function(){
 				"openMin" : $openMin.val(),
 				"closeHour" : $closeHour.val(),
 				"closeMin" : $closeMin.val(),
-				"securityKey" : $securityKey.val()
+				"securityKey" : $securityKey.val(),
+				"typeUser" : $typeUser
 			};   
 			console.log(jsonObject);
 

@@ -57,22 +57,38 @@ function attemptLogin($userName, $userPassword, $typeUser){
 	}
 }
 
-function attemptValidateUser($username){
+function attemptValidateUser($username, $typeUser){
 
 	$conn = connectionToDataBase();
 
 	if ($conn != null){
-		$sql = "SELECT username FROM UsersDatabase WHERE username = '$username'";
+		if ($typeUser == "consumer") {
+			$sql = "SELECT username FROM user_information WHERE username = '$username'";
 
-		$result = $conn->query($sql);
+			$result = $conn->query($sql);
 
-		if ($result->num_rows > 0) {
-			$conn -> close();
-			return array("status" => "USERNAME ALREADY IN USE");
+			if ($result->num_rows > 0) {
+				$conn -> close();
+				return array("status" => "USERNAME ALREADY IN USE");
+			}
+			else{
+				$conn -> close();
+				return array("status" => "SUCCESS");
+			}
 		}
-		else{
-			$conn -> close();
-			return array("status" => "SUCCESS");
+		else {
+			$sql = "SELECT rUsername FROM restaurant_information WHERE rUsername = '$username'";
+
+			$result = $conn->query($sql);
+
+			if ($result->num_rows > 0) {
+				$conn -> close();
+				return array("status" => "USERNAME ALREADY IN USE");
+			}
+			else{
+				$conn -> close();
+				return array("status" => "SUCCESS");
+			}
 		}
 	}
 	else{
@@ -82,13 +98,39 @@ function attemptValidateUser($username){
 
 }
 
-function attemptRegister($userName, $userPassword, $userFirstName, $userLastName, $userEmail, $userCountry, $userGender){
+function attemptRegisterConsumer($userName, $userPassword, $userFirstName, $userLastName, $userEmail, $userCountry, $userGender, $userBDay, $userBMonth, $userBYear){
 
 	$conn = connectionToDataBase();
 
 	if ($conn != null){
 		$last_id = $conn->insert_id;
-		$sql = "INSERT INTO UsersDatabase (idUser, fName, lName, username, passwrd, email, country, gender) VALUES ('$last_id', $userFirstName', '$userLastName', '$userName', '$userPassword', '$userEmail', '$userCountry', '$userGender')";
+		$sql = "INSERT INTO user_information (idUser, fName, lName, username, passwrd, email, country, gender, birthDay, birthMonth, birthYear) VALUES ('$last_id', '$userFirstName', '$userLastName', '$userName', '$userPassword', '$userEmail', '$userCountry', '$userGender', '$userBDay','$userBMonth', '$userBYear')";
+
+		$result = $conn->query($sql);
+
+		if ($result) {
+			$conn -> close();
+			return array("status" => "SUCCESS");
+		}
+		else{
+			$conn -> close();
+			return array("status" => "ERROR");
+		}
+	}
+	else{
+		$conn -> close();
+		return array("status" => "CONNECTION WITH DB WENT WRONG");
+	}
+
+}
+
+function attemptRegisterRestaurant($userName, $RestaurantName, $newUsernameRestaurant, $email, $restaurantAddress, $RestaurantPassword, $restaurantPhone, $restaurantWebpage, $openHour, $openMin, $closeHour, $closeMin, $securityKey){
+
+	$conn = connectionToDataBase();
+
+	if ($conn != null){
+		$last_id = $conn->insert_id;
+		$sql = "INSERT INTO restaurant_information (idRestaurant, rName, rUsername, passwrd, address, phone, email, webpage, openHour, openMin, closeHour, closeMin, securityKey) VALUES ('$last_id', '$userName', '$RestaurantName', '$newUsernameRestaurant', '$RestaurantPassword', '$restaurantAddress', '$restaurantPhone', '$email', '$restaurantWebpage', '$openHour', '$openMin', '$closeHour', '$closeMin', '$securityKey')";
 
 		$result = $conn->query($sql);
 

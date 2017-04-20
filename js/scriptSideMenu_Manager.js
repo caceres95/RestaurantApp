@@ -15,4 +15,24 @@ $(document).ready(function(){
     $("#restaurant_profile_manager").on("click", function(){
         window.location.replace("restaurant_profile.php");
     });
+
+    $("#log_out_button").on("click", function(){
+        var jsonToSend = {
+            "action" : "ENDSESSION"
+        };
+        $.ajax({
+            url : "data/applicationLayer.php",
+            type : "POST",
+            data : jsonToSend,
+            dataType : "json",
+            contentType : "application/x-www-form-urlencoded",
+            success : function(jsonResponse){
+                window.location.replace("index.php");
+            },
+            error : function(errorMessage){
+                alert(errorMessage.responseText);
+            }
+
+        });
+    });
 });
