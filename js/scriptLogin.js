@@ -36,8 +36,7 @@ $(document).ready(function(){
     			dataType : "json",
     			contentType : "application/x-www-form-urlencoded",
     			success : function(jsonResponse){
-    				console.log(jsonResponse);
-    				if (jsonResponse.message == "Consumer"){
+    				if (jsonResponse.message == "consumer"){
     					window.location.replace("homepage_consumers.php");
     				}
     				else{

@@ -19,8 +19,6 @@ function loginFunction(){
 
 	$result = attemptLogin($userName, $userPassword, $typeUser);
 
-	echo $result;
-
 	if ($result["status"] == "SUCCESS"){
 		$remember = $_POST["remember"];
 
@@ -34,11 +32,11 @@ function loginFunction(){
 		$_SESSION['loginTime'] = time();
 		$_SESSION['typeUser'] = $typeUser;
 
-		echo json_encode(array("message" => "Login Successful"));
+		echo json_encode(array("message" => "consumer"));
 	}	
 	else{
 		header('HTTP/1.1 500' . $result["status"]);
-		die($result);
+		die($result["status"]);
 	}	
 }
 

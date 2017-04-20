@@ -4,7 +4,7 @@ function connectionToDataBase(){
 	$servername = "localhost";
 	$username = "root";
 	$password = "root";
-	$dbname = "restauran_app_database";
+	$dbname = "restaurant_app_database";
 
 	$conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -26,12 +26,11 @@ function attemptLogin($userName, $userPassword, $typeUser){
 
 			$result = $conn->query($sql);
 
-			if ($result->num_rows > 0)
-			{
+			if ($result->num_rows > 0) {
 				$conn -> close();
 				return array("status" => "SUCCESS");
 			}
-			else{
+			else {
 				$conn -> close();
 				return array("status" => "WRONG CREDENTIALS!");
 			}
