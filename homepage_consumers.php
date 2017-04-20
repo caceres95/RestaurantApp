@@ -130,10 +130,7 @@
                         <th>Web Page</th>
                       </tr>
                     </thead>
-                    <tbody>
-
-                 </tbody>
-               </table>
+                  </table>
              </div>
            </div>
          </div>
@@ -155,8 +152,8 @@
 <!-- js own scripts -->
 <!-- js own scripts -->
 <script src="gentelella/vendors/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="js/scriptSideMenu_Consumer.js"></script>
-<script type="text/javascript" src="js/scriptHomepage_Consumer.js"></script>
+<script  type="text/javascript" src="js/scriptSideMenu_Consumer.js"></script>
+<script  type="text/javascript" src="js/scriptHomepage_Consumer.js"></script>
 
 <!-- jQuery -->
 <script  src="gentelella/vendors/jquery/dist/jquery.min.js"></script>
@@ -172,8 +169,8 @@
 <script  src="gentelella/vendors/iCheck/icheck.min.js"></script>
 <!-- Datatables -->
 <script  src="gentelella/vendors/datatables.net/js/jquery.dataTables.js"></script>
-<script src="gentelella/vendors/datatables.net-bs/js/dataTables.bootstrap.js"></script>
-<script src="gentelella/vendors/datatables.net-buttons/js/dataTables.buttons.js"></script>
+<script  src="gentelella/vendors/datatables.net-bs/js/dataTables.bootstrap.js"></script>
+<script  src="gentelella/vendors/datatables.net-buttons/js/dataTables.buttons.js"></script>
 <script  src="gentelella/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.js"></script>
 <script  src="gentelella/vendors/datatables.net-buttons/js/buttons.flash.js"></script>
 <script  src="gentelella/vendors/datatables.net-buttons/js/buttons.html5.js"></script>
@@ -181,14 +178,14 @@
 <script  src="gentelella/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.js"></script>
 <script  src="gentelella/vendors/datatables.net-keytable/js/dataTables.keyTable.js"></script>
 <script  src="gentelella/vendors/datatables.net-responsive/js/dataTables.responsive.js"></script>
-<script src="gentelella/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+<script  src="gentelella/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
 <script  src="gentelella/vendors/datatables.net-scroller/js/dataTables.scroller.js"></script>
 <script  src="gentelella/vendors/jszip/dist/jszip.js"></script>
 <script  src="gentelella/vendors/pdfmake/build/pdfmake.js"></script>
 <script  src="gentelella/vendors/pdfmake/build/vfs_fonts.js"></script>
 
 <!-- Custom Theme Scripts -->
-<script src="gentelella/build/js/custom.min.js"></script>
+<script  src="gentelella/build/js/custom.min.js"></script>
 
 </body>
 </html>
