@@ -39,8 +39,8 @@
                 <img src="gentelella/production/images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
-                <span>Welcome,</span>
-                <h2>Carlos Cáceres</h2>
+                <span>Welcome</span>
+              <h2></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -169,7 +169,7 @@
     <script src="gentelella/vendors/pdfmake/build/vfs_fonts.js"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="gentelella/build/js/custom.min.js"></script>
+    <!script src="gentelella/build/js/custom.min.js"><!/script>
 
     <!-- js own scripts -->
     <script type="text/javascript" src="js/scriptSideMenu_Manager.js"></script>

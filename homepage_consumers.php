@@ -186,7 +186,7 @@
 <script  src="gentelella/vendors/pdfmake/build/vfs_fonts.js"></script>
 
 <!-- Custom Theme Scripts -->
-<script  src="gentelella/build/js/custom.min.js"></script>
+<!script src="gentelella/build/js/custom.min.js"><!/script>
 
 </body>
 </html>
