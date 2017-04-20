@@ -14,17 +14,17 @@
     margin: 10px 15px 0 0;
 }
 
-#dob-day {
+#dob-day, #init-day, #expire-day {
     width: 10%;
     float: left;
 }
 
-#dob-month {
+#dob-month, #init-month, #expire-month {
     width: 20%;
     float: left;
 }
 
-#dob-year  {
+#dob-year, #init-year, #expire-year {
     width: 18%;
 }
 
