@@ -26,9 +26,32 @@ $(document).ready(function(){
 		},
 		error: function(errorMessage){
 			alert(errorMessage.responseText);
-			window.location.replace("index.php");
+			//window.location.replace("index.php");
 		}
 	});
+
+	$("#searchBox").on("click", function(){
+        var jsonToSend ={
+            "action" : "SEARCH",
+            "search" : $("#searchBox").val()
+        };
+
+        $.ajax({
+            url : "data/applicationLayer.php",
+            type : "POST",
+            data : jsonToSend,
+            dataType : "json",
+            contentType : "application/x-www-form-urlencoded",
+            success : function(jsonResponse){
+                window.location.replace("search.php");
+            },
+            error : function(errorMessage){
+                alert(errorMessage.responseText);
+            }
+
+        });
+        
+    });
 
 });
 

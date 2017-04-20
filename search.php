@@ -62,6 +62,7 @@
                 <li id="homapage_list_consumer" ><a><i class="fa fa-home"  ></i> Homepage </a> </li>
                 <li id="restaurant_reviews_list_consumer"><a><i class="fa fa-edit"></i> Restaurants Reviews </a> </li>
                 <li id="promotions_list_consumer"><a><i class="fa fa-star"></i> Promotions </a></li>
+                <li id="restaurant_profile_consumer"><a><i class="fa fa-cutlery"></i> Restaurants Profile </a> </li>
               </ul>
             </div>
           </div>
@@ -162,7 +163,7 @@
 <!-- jQuery -->
 <script  src="gentelella/vendors/jquery/dist/jquery.min.js"></script>
 <script async type="text/javascript" src="js/scriptSideMenu_Consumer.js"></script>
-<script async type="text/javascript" src="js/scriptHomepage_Consumer.js"></script>
+<script async type="text/javascript" src="js/scriptSearch.js"></script>
 
 
 <!-- Bootstrap -->
